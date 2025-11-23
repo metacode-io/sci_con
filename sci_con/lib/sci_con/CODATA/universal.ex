@@ -126,7 +126,7 @@ defmodule SciCon.CODATA.Universal do
   @h_bar_c %Metadata{
     symbol: :h_bar_c,
     name: "reduced Planck times c in MeV fm",
-    value: 197.326_980_4,
+    value: 197.326_9804,
     unit: "MeV fm",
     rel_uncertainty: :exact,
     uncertainty: :exact
@@ -135,10 +135,10 @@ defmodule SciCon.CODATA.Universal do
   @epsilon_0 %Metadata{
     symbol: :epsilon_0,
     name: "vacuum electric permittivity",
-    value: 8.854_187_818_8E-12,
+    value: 8.854_187_8188E-12,
     unit: "F m^-1",
     rel_uncertainty: 1.6E-10,
-    uncertainty: 0.000_000_001_4E-12
+    uncertainty: 0.000_000_0014E-12
   }
 
   @mu_0 %Metadata{
@@ -150,7 +150,6 @@ defmodule SciCon.CODATA.Universal do
     uncertainty: 0.000_000_000_20E-6
   }
 
-  def speed_of_light_in_vacuum(), do: @c
   def characteristic_impedence_of_vacuum(), do: @z_0
   def newtonian_gravitation(), do: @g
   def newtonian_gravitation_over_hbar_c(), do: @g_over_hbar_c
@@ -164,6 +163,7 @@ defmodule SciCon.CODATA.Universal do
   def planck_constant_reduced(), do: @h_bar
   def planck_constant_reduced_in_eV_s(), do: @h_bar_in_eVs
   def planck_constant_reduced_times_c_in_MeV_fm(), do: @h_bar_c
+  def speed_of_light_in_vacuum(), do: @c
   def vacuum_electric_permittivity(), do: @epsilon_0
   def vacuum_magnetic_permeability(), do: @mu_0
 

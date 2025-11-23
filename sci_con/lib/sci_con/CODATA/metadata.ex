@@ -6,6 +6,7 @@ defmodule SciCon.CODATA.Metadata do
     :value,
     :unit,
     :rel_uncertainty,
-    :uncertainty
+    :uncertainty,
+    :notes
   ]
 end
