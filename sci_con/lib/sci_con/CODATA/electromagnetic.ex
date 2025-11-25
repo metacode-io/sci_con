@@ -180,7 +180,7 @@ defmodule SciCon.CODATA.Electromagnetic do
 
   @phi_0 %Metadata{
     symbol: :Phi_0,
-    name: "magnetic_flux_quantum",
+    name: "magnetic flux quantum",
     value: 2.067_833_848E-15,
     unit: "Wb",
     rel_uncertainty: :exact,
