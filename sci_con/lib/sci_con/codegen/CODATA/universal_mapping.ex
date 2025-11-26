@@ -7,12 +7,14 @@ defmodule SciCon.Codegen.CODATA.UniversalMapping do
   use SciCon.Codegen.CODATA.Mapping, category: :universal
 
   group :planck_scale do
+    # Planck Units
     constant "Planck length", :l_p, :planck_length
     constant "Planck mass", :m_p, :planck_mass
     constant "Planck mass energy equivalent in GeV", :m_p_c2, :planck_mass_energy_in_gev
     constant "Planck temperature", :t_p, :planck_temperature
     constant "Planck time", :ts_p, :planck_time
 
+    # Planck Constant Family
     constant "Planck constant", :h, :planck_constant
     constant "Planck constant in eV/Hz", :h_in_ev_hz, :planck_constant_in_ev_per_hz
     constant "reduced Planck constant", :hbar, :planck_constant_reduced
@@ -22,14 +24,17 @@ defmodule SciCon.Codegen.CODATA.UniversalMapping do
   end
 
   group :relativistic do
+    # Relativistic / Causal Structure Constants
     constant "speed of light in vacuum", :c, :speed_of_light
   end
 
   group :gravitation do
+    # Gravitational Constant
     constant "Newtonian constant of gravitation", :g, :newtonian_gravitation
   end
 
   group :electromagnetic_vacuum do
+    # Vacuum Electromagnetic Constants
     constant "characteristic impedance of vacuum", :z_0, :vacuum_impedance
     constant "vacuum electric permittivity", :epsilon_0, :vacuum_permittivity
     constant "vacuum magnetic permeability", :mu_0, :vacuum_permeability

@@ -51,6 +51,7 @@ defmodule SciCon.Codegen.CODATA.PhysicoChemicalMapping do
   end
 
   group :quantum_molar do
+    # Molar Quantum Constants
     constant "molar Planck constant", :n_a_h, :molar_planck_constant
   end
 end
