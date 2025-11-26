@@ -10,12 +10,12 @@ defmodule SciCon.Codegen.CODATA.ElectromagneticMapping do
     constant "Bohr magneton", :mu_b, :bohr_magneton
     constant "Bohr magneton in eV/T", :mu_b_ev_Tt, :bohr_magneton_in_ev_per_t
     constant "Bohr magneton in Hz/T", :mu_b_h, :bohr_magneton_in_hz_per_t
-    constant "Bohr magneton in inverse meter per tesla", :mu_b_hc, :bohr_magneton_in_inverse_m_per_tesla
+    constant "Bohr magneton in inverse meter per tesla", :mu_b_hc, :bohr_magneton_inverse_m_per_tesla
     constant "Bohr magneton in K/T", :mu_b_k, :bohr_magneton_in_k_per_t
 
     constant "nuclear magneton", :mu_n, :nuclear_magneton
     constant "nuclear magneton in eV/T", :mu_n_ev_t, :nuclear_magneton_in_ev_per_t
-    constant "nuclear magneton in inverse meter per tesla", :mu_n_hc, :nuclear_magneton_in_inverse_m_per_tesla
+    constant "nuclear magneton in inverse meter per tesla", :mu_n_hc, :nuclear_magneton_inverse_m_per_tesla
     constant "nuclear magneton in K/T", :mu_n_k, :nuclear_magneton_in_k_per_t
     constant "nuclear magneton in MHz/T", :mu_n_h, :nuclear_magneton_in_mhz_per_t
   end
