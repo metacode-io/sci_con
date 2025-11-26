@@ -125,7 +125,7 @@ defmodule SciCon.CODATA.Universal do
 
   @h_bar_c %Metadata{
     symbol: :h_bar_c,
-    name: "reduced Planck times c in MeV fm",
+    name: "reduced Planck constant times c in MeV fm",
     value: 197.326_9804,
     unit: "MeV fm",
     rel_uncertainty: :exact,
