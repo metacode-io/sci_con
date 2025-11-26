@@ -139,7 +139,14 @@ defmodule SciCon.Codegen.CODATA.AtomicNuclearMapping do
   end
 
   group :atomic_structure do
-
+    constant "Bohr radius", :a_0, :bohr_radius
+    constant "Rydberg constant", :r_inf, :rydberg_constant
+    constant "Rydberg constant times c in Hz", :r_inf_c, :rydberg_constant_times_c_in_hz
+    constant "Rydberg constant times hc in eV", :r_inf_hc_in_ev, :rydberg_constant_times_hc_in_ev
+    constant "Rydberg constant times hc in J", :r_inf_hc_in_j, :rydberg_constant_times_hc_in_j
+    constant "Hartree energy", :e_h, :hartree_energy
+    constant "Hartree energy in eV", :e_h_in_ev, :hartree_energy_ev
+    constant "classical electron radius", :r_e, :classical_electron_radius
   end
 
   group :compton_wavelengths do
