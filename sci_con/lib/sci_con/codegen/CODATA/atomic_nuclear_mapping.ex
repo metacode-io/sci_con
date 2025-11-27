@@ -150,6 +150,8 @@ defmodule SciCon.Codegen.CODATA.AtomicNuclearMapping do
   end
 
   group :compton_wavelengths do
+    constant "Compton wavelength", :lambda_c, :compton_wavelength
+    constant "reduced Compton wavelength", :lambda_bar_c, :compton_wavelength_reduced
     constant "muon Compton wavelength", :lambda_c_mu, :muon_compton_wavelength
     constant "reduced muon Compton wavelength", :lambda_bar_c_mu, :muon_compton_wavelength_reduced
     constant "tau Compton wavelength", :lambda_c_tau, :tau_compton_wavelength
@@ -161,14 +163,58 @@ defmodule SciCon.Codegen.CODATA.AtomicNuclearMapping do
   end
 
   group :cross_species_magnetic_moments do
+    constant "deuteron-electron magnetic moment ratio", :mu_d_over_mu_e, :deuteron_electron_magnetic_moment_ratio
+    constant "deuteron-neutron magnetic moment ratio", :mu_d_over_mu_n, :deuteron_neutron_magnetic_moment_ratio
+    constant "deuteron-proton magnetic moment ratio", :mu_d_over_mu_p, :deuteron_proton_magnetic_moment_ratio
+    constant "electron to shielded helion magnetic moment ratio", :mu_e_over_mu_h_prime, :electron_shielded_helion_magnetic_moment_ratio
+    constant "electron to shielded proton magnetic moment ratio", :mu_e_over_mu_p_prime, :electron_shielded_proton_magnetic_moment_ratio
+    constant "electron-deuteron magnetic moment ratio", :mu_e_over_mu_d, :electron_deuteron_magnetic_moment_ratio
+    constant "electron-muon magnetic moment ratio", :mu_e_over_mu_mu, :electron_muon_magnetic_moment_raito
+    constant "electron-neutron magnetic moment ratio", :mu_e_over_mu_n, :electron_neutron_magnetic_moment_ratio
+    constant "electron-proton magnetic moment ratio", :mu_e_over_mu_p, :electron_proton_magnetic_moment_ratio
+    constant "muon-proton magnetic moment ratio", :mu_mu_over_mu_p, :muon_proton_magnetic_moment_ratio
+    constant "neutron to shielded proton magnetic moment ratio", :mu_n_over_mu_p_prime, :neutron_shielded_proton_magnetic_moment_ratio
+    constant "neutron-electron magnetic moment ratio", :mu_n_over_mu_e, :neutron_electron_magnetic_moment_ratio
+    constant "neutron-proton magnetic moment ratio", :mu_n_over_mu_p, :neutron_proton_magnetic_moment_ratio
+    constant "proton-neutron magnetic moment ratio", :mu_p_over_mu_n, :proton_neutron_magnetic_moment_ratio
     constant "shielded helion to proton magnetic moment ratio", :mu_h_prime_over_mu_p, :shielded_helion_proton_magnetic_moment_ratio
     constant "shielded helion to shielded proton magnetic moment ratio", :mu_h_prime_over_mu_p_prime, :shielded_helion_shielded_proton_magnetic_moment_ratio
 
   end
 
   group :mass_ratios do
+    constant "alpha particle-electron mass ratio", :m_alpha_over_m_e, :alpha_particle_electron_mass_ratio
+    constant "alpha particle-proton mass ratio", :m_alpha_over_m_p, :alpha_particle_proton_mass_ratio
+    constant "deuteron-electron mass ratio", :m_d_over_m_e, :deuteron_electron_mass_ratio
+    constant "deuteron-proton mass ratio", :m_d_over_m_p, :deuteron_proton_mass_ratio
+    constant "electron to alpha particle mass ratio", :m_e_over_m_alpha, :electron_alpha_particle_mass_ratio
+    constant "electron-deuteron mass ratio", :m_e_over_m_d, :electron_deuteron_mass_ratio
+    constant "electron-helion mass ratio", :m_e_over_m_h, :electron_helion_mass_ratio
+    constant "electron-muon mass ratio", :m_e_over_m_u, :electron_muon_mass_ratio
+    constant "electron-neutron mass ratio", :m_e_over_m_n, :electron_neutron_mass_ratio
+    constant "electron-proton mass ratio", :m_e_over_m_p, :electron_proton_mass_ratio
+    constant "electron-tau mass ratio", :m_e_over_m_tau, :electron_tau_mass_ratio
+    constant "electron-triton mass ratio", :m_e_over_m_t, :electron_triton_mass_ratio
     constant "helion-electron mass ratio", :m_h_over_m_e, :helion_electron_mass_ratio
     constant "helion-proton mass ratio", :m_h_over_m_p, :helion_proton_mass_ratio
+    constant "muon-electron mass ratio", :m_mu_over_m_e, :muon_electron_mass_ratio
+    constant "muon-neutron mass ratio", :m_mu_over_m_n, :muon_neutron_mass_ratio
+    constant "muon-proton mass ratio", :m_mu_over_m_p, :muon_proton_mass_ratio
+    constant "muon-tau mass ratio", :m_mu_over_m_tau, :muon_tau_mass_ratio
+    constant "neutron-electron mass ratio", :m_n_over_m_e, :neutron_electron_mass_ratio
+    constant "neutron-muon mass ratio", :m_n_over_m_mu, :neutron_muon_mass_ratio
+    constant "neutron-proton mass ratio", :m_n_over_m_p, :neutron_proton_mass_ratio
+    constant "neutron-tau mass ratio", :m_n_over_m_tau, :neutron_tau_mass_ratio
+    constant "proton-electron mass ratio", :m_p_over_m_e, :proton_electron_mass_ratio
+    constant "proton-muon mass ratio", :m_p_over_m_mu, :proton_muon_mass_ratio
+    constant "proton-neutron mass ratio", :m_p_over_m_n, :proton_neutron_mass_ratio
+    constant "proton-tau mass ratio", :m_p_over_m_tau, :proton_tau_mass_ratio
+    constant "tau-electron mass ratio", :m_tau_over_m_e, :tau_electron_mass_ratio
+    constant "tau-muon mass ratio", :m_tau_over_m_mu, :tau_muon_mass_ratio
+    constant "tau-neutron mass ratio", :m_tau_over_m_n, :tau_neutron_mass_ratio
+    constant "tau-proton mass ratio", :m_tau_over_m_p, :tau_proton_mass_ratio
+    constant "triton-electron mass ratio", :m_t_over_m_e, :triton_electron_mass_ratio
+    constant "triton-proton mass ratio", :m_t_over_m_p, :triton_proton_mass_ratio
   end
 
   group :fundamental_interactions do
