@@ -32,7 +32,7 @@ defmodule SciCon.Codegen.CODATA.AtomicNuclearMapping do
     constant "muon mass energy equivalent", :m_mu_c2, :muon_mass_energy
     constant "muon mass energy equivalent in MeV", :m_mu_c2_in_mev, :muon_mass_energy_mev
     constant "muon mass in u", :m_mu_in_u, :muon_mass_u
-    constant "muon molar mass", big_m_mu, :muon_molar_mass
+    constant "muon molar mass", :big_m_mu, :muon_molar_mass
 
     # Tau
     constant "tau mass", :m_tau, :tau_mass
@@ -218,10 +218,15 @@ defmodule SciCon.Codegen.CODATA.AtomicNuclearMapping do
   end
 
   group :fundamental_interactions do
-
+    constant "Fermi coupling constant", :g_f_over_hbar_c3, :fermi_coupling_constant
+    constant "fine-structure constant", :alpha, :fine_structure_constant
+    constant "inverse fine-structure constant", :alpha_inv, :inverse_fine_structure_constant
+    constant "weak mixing angle", :sin2_theta_w, :weak_mixing_angle
   end
 
   group :miscellaneous do
-
+    constant "Thomson cross section", :sigma_e, :thomson_cross_section
+    constant "quantum of circulation", :pi_hbar_over_m_e, :quantum_of_circulation
+    constant "quantum of circulation times 2", :twice_pi_hbar_over_m_e, :quantum_of_circulation_times_two
   end
 end
