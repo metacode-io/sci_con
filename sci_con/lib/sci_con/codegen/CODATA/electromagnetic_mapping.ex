@@ -38,7 +38,7 @@ defmodule SciCon.Codegen.CODATA.ElectromagneticMapping do
 
   group :electric_charge do
     # Electric Charge
-    constant "elementary charge", :e, :elementary_charge
+    constant "elementary charge", :e, :elementary_charge, defined_constant?: true
     constant "elementary charge over h-bar", :e_over_hbar, :elementary_charge_over_hbar
   end
 

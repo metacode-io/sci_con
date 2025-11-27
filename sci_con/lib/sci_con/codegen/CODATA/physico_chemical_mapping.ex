@@ -15,13 +15,13 @@ defmodule SciCon.Codegen.CODATA.PhysicoChemicalMapping do
     constant "molar mass of carbon-12", :mm_c12, :molar_mass_carbon12
 
     # Avogadro / Mole-related
-    constant "Avogadro constant", :n_a, :avogadro_constant
+    constant "Avogadro constant", :n_a, :avogadro_constant, defined_constant?: true
     constant "Faraday constant", :f, :faraday_constant
   end
 
   group :thermal_statistical do
     #Boltzmann Constant Family
-    constant "Boltzmann constant", :k, :boltzmann_constant
+    constant "Boltzmann constant", :k, :boltzmann_constant, defined_constant?: true
     constant "Boltzmann constant in eV/K", :k_in_ev_k, :boltzmann_constant_in_ev_per_k
     constant "Boltzmann constant in Hz/K", :k_over_h, :boltzmann_constant_in_hz_per_k
     constant "Boltzmann constant in inverse meter per kelvin", :k_over_hc, :boltzmann_constant_inverse_m_per_k

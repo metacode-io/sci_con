@@ -9,7 +9,8 @@ defmodule SciCon.Codegen.CODATA.Mapping do
         symbol: :mu_B,
         fun_name: :bohr_magneton,
         category: :electromagnetic,
-        group: :magnetic_moments
+        group: :magnetic_moments,
+        defined_constant?: false
       }
 
   Usage:
@@ -18,8 +19,8 @@ defmodule SciCon.Codegen.CODATA.Mapping do
         use SciCon.Codegen.CODATA.Mapping, category: :electromagnetic
 
         group :magnetic_moments do
-          constant "Bohr magneton", :mu_B, :bohr_magneton
-          constant "Bohr magneton in eV/T", :mu_B_eV_T, :bohr_magneton_in_eV_T
+          constant "Bohr magneton", :mu_b, :bohr_magneton
+          constant "Bohr magneton in eV/T", :mu_b_ev_t, :bohr_magneton_ev_per_t
         end
       end
   """
@@ -48,9 +49,9 @@ defmodule SciCon.Codegen.CODATA.Mapping do
   @doc """
   Define a single mapping.
 
-      constant "Bohr magneton", :mu_B, :bohr_magneton
+      constant "Bohr magneton", :mu_b, :bohr_magneton
   """
-  defmacro constant(nist_name, symbol, fun_name, opts \\ []) do
+  defmacro constant(nist_name, symbol, fun_name, opts \\ [defined_constant?: false]) do
     quote bind_quoted: [
       nist_name: nist_name,
       symbol: symbol,
@@ -75,8 +76,8 @@ defmodule SciCon.Codegen.CODATA.Mapping do
   Optional: group constants by a category label for readability
 
       group :bohr_magneton do
-        constant "Bohr magneton", :mu_B, :bohr_magneton
-        constant "Bohr magneton in eV/T", :mu_B_eV_T, :bohr_magneton_in_eV_T
+        constant "Bohr magneton", :mu_b, :bohr_magneton
+        constant "Bohr magneton in eV/T", :mu_b_ev_t, :bohr_magneton_ev_per_t
       end
   """
   defmacro group(group_name, do: block) do
