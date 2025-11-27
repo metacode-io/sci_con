@@ -4,6 +4,8 @@ defmodule Mix.Tasks.SciCon.Codegen do
   use Mix.Task
 
   def run(args) do
+    {:ok, ascii} = CODATA.Source.ensure_local(2022)
+
     universal_mapping = CODATA.UniversalMapping.mappings()
     electromagnetic_mapping = CODATA.ElectromagneticMapping.mappings()
     physico_chemical_mapping = CODATA.PhysicoChemicalMapping.mappings()

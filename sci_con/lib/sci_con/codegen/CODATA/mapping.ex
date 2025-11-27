@@ -9,8 +9,8 @@ defmodule SciCon.Codegen.CODATA.Mapping do
         symbol: :mu_B,
         fun_name: :bohr_magneton,
         category: :electromagnetic,
-        group: :magnetic_moments,
-        defined_constant?: false
+        group: :magnetic_moments, # optional
+        defined_constant?: false # optional, defaults to `false`
       }
 
   Usage:
