@@ -1,4 +1,4 @@
-defmodule SciCon.Codegen.CODATA.ElectromagneticMapping do
+defmodule SciCon.Codegen.CODATA.Mappings.ElectromagneticMapping do
   @moduledoc """
   Mapping from NIST CODATA 'Electromagnetic' names to internal
   symbols and function names.

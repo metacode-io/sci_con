@@ -1,4 +1,4 @@
-defmodule SciCon.Codegen.CODATA.AtomicSpectroscopyMapping do
+defmodule SciCon.Codegen.CODATA.Mappings.AtomicSpectroscopyMapping do
   @moduledoc """
   Mapping from NIST CODATA 'Defined constants' names to internal
   symbols and function names. Only taking certain defined constants

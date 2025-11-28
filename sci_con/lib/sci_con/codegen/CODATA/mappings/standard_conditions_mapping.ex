@@ -1,4 +1,4 @@
-defmodule SciCon.Codegen.CODATA.StandardConditionsMapping do
+defmodule SciCon.Codegen.CODATA.Mappings.StandardConditionsMapping do
   @moduledoc """
   Mapping from NIST CODATA 'Defined constants' names to internal
   symbols and function names. Only taking certain defined constants

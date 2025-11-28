@@ -6,7 +6,7 @@ defmodule SciCon.Codegen.CODATA.Mapping do
 
       %{
         nist_name: "Bohr magneton",
-        symbol: :mu_B,
+        attr_name: :mu_B,
         fun_name: :bohr_magneton,
         category: :electromagnetic,
         group: :magnetic_moments, # optional
@@ -51,17 +51,17 @@ defmodule SciCon.Codegen.CODATA.Mapping do
 
       constant "Bohr magneton", :mu_b, :bohr_magneton
   """
-  defmacro constant(nist_name, symbol, fun_name, opts \\ [defined_constant?: false]) do
+  defmacro constant(nist_name, attr_name, fun_name, opts \\ [defined_constant?: false]) do
     quote bind_quoted: [
       nist_name: nist_name,
-      symbol: symbol,
+      attr_name: attr_name,
       fun_name: fun_name,
       opts: opts
     ] do
       entry =
         %{
           nis_name: nist_name,
-          symbol: symbol,
+          attr_name: attr_name,
           fun_name: fun_name,
           category: @category,
           group: @current_group
