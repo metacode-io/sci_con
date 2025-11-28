@@ -4,7 +4,7 @@ defmodule SciCon.Codegen.CODATA.Mappings.AtomicNuclearMapping do
   symbols and function names.
   """
 
-  use SciCon.Codegen.CODATA.Mapping, category: :atomic_nuclear
+  use SciCon.Codegen.CODATA.Mapper, category: :atomic_nuclear
 
   group :leptons do
     # Electron

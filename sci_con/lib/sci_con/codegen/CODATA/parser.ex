@@ -9,7 +9,7 @@ defmodule SciCon.Codegen.CODATA.Parser do
 
   defparsec :parse_codata_row, parse_codata_constant()
 
-  def parse_codata_ascii(contents) when is_binary(contents) do
+  def parse_codata_ascii!(contents) when is_binary(contents) do
     contents
     |> String.split(~r/\R/, trim: true)
     |> drop_front_matter()

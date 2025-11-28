@@ -7,8 +7,8 @@ defmodule SciCon.Codegen.CODATA.Mappings.AtomicSpectroscopyMapping do
   one special defined constant which is used to define seconds in time.
   """
 
-  use SciCon.Codegen.CODATA.Mapping, category: :atomic_spectroscopy
+  use SciCon.Codegen.CODATA.Mapper, category: :atomic_spectroscopy
 
-  constant "hyperfine transition frequency of Cs-133", :delta_nu_cs, :hyperfine_transition_frequency_cs_133, defined_constant?: true
+  constant "hyperfine transition frequency of Cs-133", :delta_nu_cs, :hyperfine_transition_frequency_cs_133, defined?: true
 
 end

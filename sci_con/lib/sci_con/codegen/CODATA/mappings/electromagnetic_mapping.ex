@@ -4,7 +4,7 @@ defmodule SciCon.Codegen.CODATA.Mappings.ElectromagneticMapping do
   symbols and function names.
   """
 
-  use SciCon.Codegen.CODATA.Mapping, category: :electromagnetic
+  use SciCon.Codegen.CODATA.Mapper, category: :electromagnetic
 
   group :magnetic_moments do
     # Bohr Magneton Family
@@ -38,7 +38,7 @@ defmodule SciCon.Codegen.CODATA.Mappings.ElectromagneticMapping do
 
   group :electric_charge do
     # Electric Charge
-    constant "elementary charge", :e, :elementary_charge, defined_constant?: true
+    constant "elementary charge", :e, :elementary_charge, defined?: true
     constant "elementary charge over h-bar", :e_over_hbar, :elementary_charge_over_hbar
   end
 
