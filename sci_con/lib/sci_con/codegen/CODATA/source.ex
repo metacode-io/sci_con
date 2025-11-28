@@ -2,7 +2,7 @@ defmodule SciCon.Codegen.CODATA.Source do
   @moduledoc """
   Fetches or loads CODATA ASCII data files.
 
-  Privides:
+  Provides:
     - fetch_remote(year)  -> download from NIST
     - load_local(year)    -> load priv/CODATA/allascii_YEAR.txt
     - ensure_local(year)  -> fetch if missing
