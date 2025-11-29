@@ -1,4 +1,4 @@
-defmodule SciCon.Codegen.CODATA.Mappings.AtomicNuclearMapping do
+defmodule SciCon.Codegen.CODATA.Mappings.AtomicNuclearMapper do
   @moduledoc """
   Mapping from NIST CODATA 'Atomic and Nuclear' names to internal
   symbols and function names.

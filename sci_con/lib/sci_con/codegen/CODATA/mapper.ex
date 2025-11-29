@@ -1,10 +1,10 @@
 defmodule SciCon.Codegen.CODATA.Mapper do
   @moduledoc """
-  DSL for defining mappings from NIST quantity names to SciCon internals.
+  Macro for defining mappings from NIST quantity names to SciCon internals.
 
   Each mapping entry is a map:
 
-      %Mapping{
+      %SciCon.Codegen.CODATA.Mapping{
         nist_name: "Bohr magneton",
         attr_name: :mu_b,
         fun_name: :bohr_magneton,
@@ -15,7 +15,7 @@ defmodule SciCon.Codegen.CODATA.Mapper do
 
   Usage:
 
-      defmodule SciCon.Codegen.CODATA.ElectromagneticMapping do
+      defmodule SciCon.Codegen.CODATA.ElectromagneticMapper do
         use SciCon.Codegen.CODATA.Mapper, category: :electromagnetic
 
         group :magnetic_moments do

@@ -37,7 +37,7 @@ defmodule SciCon.Codegen.CODATA.Parser do
     else
       case parse_codata_row(line) do
         {:ok, row, "", _ctx, _line, _offset} ->
-          [row]
+          [row |> to_parsed_row()]
 
         {:ok, _row, rest, _ctx, _line, _offset} ->
           raise "CODATA: line not fully consumed: #{inspect(line)}; rest: #{inspect(rest)}"

@@ -39,8 +39,7 @@ defmodule SciCon.CODATA.Electromagnetic do
     value: 46.686_447_719,
     unit: "m^-1 T^-1",
     rel_uncertainty: 3.1E-10,
-    uncertainty: 0.000_000_015,
-    notes: "The full description of unit m^-1 is cycles or periods per meter."
+    uncertainty: 0.000_000_015
   }
 
   @mu_B_over_k %Metadata{
@@ -211,8 +210,7 @@ defmodule SciCon.CODATA.Electromagnetic do
     value: 2.542_623_410_09E-2,
     unit: "m^-1 T^-1",
     rel_uncertainty: 3.1E-10,
-    uncertainty: 0.000_000_000_79E-2,
-    notes: "The full description of unit m^-1 is cycles or periods per meter."
+    uncertainty: 0.000_000_000_79E-2
   }
 
   @mu_N_over_k %Metadata{

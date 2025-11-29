@@ -1,4 +1,4 @@
-defmodule SciCon.Codegen.CODATA.Mappings.PhysicoChemicalMapping do
+defmodule SciCon.Codegen.CODATA.Mappings.PhysicoChemicalMapper do
   @moduledoc """
   Mapping from NIST CODATA 'Physico-Chemical' names to internal
   symbols and function names.

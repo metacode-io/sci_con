@@ -22,12 +22,12 @@ defmodule SciCon.Codegen.CODATA do
 
   defp get_codata_mappings() do
     %{
-      atomic_nuclear: Mappings.AtomicNuclearMapping.mappings(),
-      atomic_spectroscopy: Mappings.AtomicSpectroscopyMapping.mappings(),
-      electromagnetic: Mappings.ElectromagneticMapping.mappings(),
-      physico_chemical: Mappings.PhysicoChemicalMapping.mappings(),
-      standard_conditions: Mappings.StandardConditionsMapping.mappings(),
-      universal: Mappings.UniversalMapping.mappings()
+      atomic_nuclear: Mappings.AtomicNuclearMapper.mappings(),
+      atomic_spectroscopy: Mappings.AtomicSpectroscopyMapper.mappings(),
+      electromagnetic: Mappings.ElectromagneticMapper.mappings(),
+      physico_chemical: Mappings.PhysicoChemicalMapper.mappings(),
+      standard_conditions: Mappings.StandardConditionsMapper.mappings(),
+      universal: Mappings.UniversalMapper.mappings()
     }
   end
 end

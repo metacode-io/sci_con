@@ -75,8 +75,7 @@ defmodule SciCon.CODATA.PhysicoChemical do
     value: 69.503_480_04,
     unit: "m^-1 K^-1",
     rel_uncertainty: :exact,
-    uncertainty: :exact,
-    notes: "The full description of unit m^-1 is cycles or periods per meter."
+    uncertainty: :exact
   }
 
   @f %Metadata{
@@ -94,8 +93,7 @@ defmodule SciCon.CODATA.PhysicoChemical do
     value: 3.741_771_852E-16,
     unit: "W m^2",
     rel_uncertainty: :exact,
-    uncertainty: :exact,
-    notes: "The full description of unit m^2 is m^-2*(m/cycle)^4"
+    uncertainty: :exact
   }
 
   @c_1L %Metadata{
@@ -104,8 +102,7 @@ defmodule SciCon.CODATA.PhysicoChemical do
     value: 1.191_042_972E-16,
     unit: "W m^2 sr^-1",
     rel_uncertainty: :exact,
-    uncertainty: :exact,
-    notes: "The full description of unit m^2 is m^-2*(m/cycle)^4"
+    uncertainty: :exact
   }
 
   @n_0_1 %Metadata{
@@ -231,8 +228,7 @@ defmodule SciCon.CODATA.PhysicoChemical do
     value: 2.897_771_955E-3,
     unit: "m K",
     rel_uncertainty: :exact,
-    uncertainty: :exact,
-    notes: "The full description of unit m is meter per cycle."
+    uncertainty: :exact
   }
 
   def atomic_mass_constant(), do: @m_u

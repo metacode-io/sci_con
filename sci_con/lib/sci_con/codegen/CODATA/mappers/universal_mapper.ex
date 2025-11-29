@@ -1,4 +1,4 @@
-defmodule SciCon.Codegen.CODATA.Mappings.UniversalMapping do
+defmodule SciCon.Codegen.CODATA.Mappings.UniversalMapper do
   @moduledoc """
   Mapping from NIST CODATA 'Universal' names to internal
   symbols and function names.
