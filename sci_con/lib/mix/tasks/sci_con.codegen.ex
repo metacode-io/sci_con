@@ -1,7 +1,6 @@
 defmodule Mix.Tasks.SciCon.Codegen do
   alias ElixirSense.Core.Options
   alias SciCon.Codegen.CODATA
-  alias SciCon.Codegen.CODATA
 
   use Mix.Task
 
@@ -36,10 +35,6 @@ defmodule Mix.Tasks.SciCon.Codegen do
       {:error, reason} ->
         Mix.raise("Codegen failed: #{inspect(reason)}")
     end
-
-
-
-
 
     #src = SciCon.Codegen.CODATA.Emit.module("SciCon.CODATA.Electromagnetic", mapping, data)
     #File.write!("lib/sci_con/CODATA/electromagnetic.ex", src)

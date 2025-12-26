@@ -2,7 +2,7 @@ defmodule SciCon.Codegen.CODATA do
   @moduledoc """
   Internal codegen for NIST CODATA physical constants.
   """
-  alias __MODULE__.{Mappings, Parser, Source}
+  alias __MODULE__.{Generator, Mappings, Parser, Source}
 
   def run(opts \\ []) do
     # source the data
@@ -12,12 +12,12 @@ defmodule SciCon.Codegen.CODATA do
     # get mappings
     mappings = get_codata_mappings()
     # generate code
-
-    {:ok, %{
-      ascii: ascii,
-      data: parsed_data,
-      mappings: mappings
-    }}
+    out_dir = Path.join(["lib", "sci_con", "CODATA_test"])
+    mappings
+    |> Map.values()
+    |> Enum.each(fn category_mappings ->
+      Generator.generate_files(parsed_data, category_mappings, out_dir)
+    end)
   end
 
   defp get_codata_mappings() do
