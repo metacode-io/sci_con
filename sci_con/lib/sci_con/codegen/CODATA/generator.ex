@@ -6,8 +6,8 @@ defmodule SciCon.Codegen.CODATA.Generator do
   alias SciCon.CODATA.Metadata
   alias SciCon.Codegen.CODATA.{Mapping, ParsedRow}
 
-  @spec generate_files([ParsedRow.t()], [Mapping.t()], Path.t()) :: :ok
-  def generate_files(rows, mappings, out_dir) do
+  @spec generate_files([Mapping.t()], [ParsedRow.t()], Path.t()) :: :ok
+  def generate_files(mappings, rows, out_dir) do
     rows
     |> build_index(mappings)
     |> Enum.each(fn {category, groups} ->
@@ -27,6 +27,15 @@ defmodule SciCon.Codegen.CODATA.Generator do
   def build_module_ast(category, group, entries) do
     module_name = module_name(category, group)
 
+    moduledoc =
+      """
+      2022 CODATA Constants
+
+      `category`: `#{category}`
+      `group`: `#{inspect(group)}`
+      """
+      |> String.trim_trailing()
+
     quoted_constants =
       Enum.map(entries, fn %{mapping: mapping, metadata: meta} ->
         constant_ast(mapping, meta)
@@ -34,11 +43,7 @@ defmodule SciCon.Codegen.CODATA.Generator do
 
     quote do
       defmodule unquote(module_name) do
-        @moduledoc """
-        2022 CODATA constants:
-        category: #{unquote(to_string(category))}
-        group: #{unquote(inspect(group))}
-        """
+        @moduledoc unquote(moduledoc)
 
         alias SciCon.CODATA.Metadata
 
@@ -48,22 +53,21 @@ defmodule SciCon.Codegen.CODATA.Generator do
   end
 
   def constant_ast(%Mapping{} = mapping, %Metadata{} = meta) do
-    attr_name = mapping.attr_name
+    attr_name_ast = {:@, [], [{mapping.attr_name, [], Elixir}]}
     fun_name = mapping.fun_name
 
-    # attribute name for the metadata struct
-    meta_attr = :"#{attr_name}_meta"
+    fundoc = """
+    CODATA 2022 value for #{meta.name}.
+
+    Unit: `#{meta.unit}`
+    Relative uncertainty: `#{meta.rel_uncertainty}`
+    """
+    |> String.trim_trailing()
 
     quote do
-      @doc """
-      CODATA 2022 value for #{unquote(meta.name)}.
-
-      Unit: #{unquote(meta.unit)}
-      Relative uncertainty: #{unquote(meta.rel_uncertainty)}
-      """
       Module.put_attribute(
         __MODULE__,
-        unquote(meta_attr),
+        unquote(mapping.attr_name),
         %Metadata{
           symbol: unquote(meta.symbol),
           name: unquote(meta.name),
@@ -73,23 +77,19 @@ defmodule SciCon.Codegen.CODATA.Generator do
           rel_uncertainty: unquote(meta.rel_uncertainty)
         })
 
-      def unquote(fun_name)(), do: @unquote(meta_attr).value
-
-      @doc """
-      Metadata for #{unquote(meta.name)} (CODATA 2022).
-      """
-      def unquote(:"#{fun_name}_metadata")(), do: @unquote(meta_attr)
+      @doc unquote(fundoc)
+      def unquote(fun_name)(), do: unquote(attr_name_ast)
     end
   end
 
   @spec module_name(atom(), atom() | nil) :: Macro.t()
   def module_name(category, nil) do
-    Module.concat([SciCon.Constants, Macro.camelize(to_string(category))])
+    Module.concat([SciCon.CODATA, Macro.camelize(to_string(category))])
   end
 
   def module_name(category, group) do
     Module.concat([
-      SciCon.Constants,
+      SciCon.CODATA,
       Macro.camelize(to_string(category)),
       Macro.camelize(to_string(group))
     ])
