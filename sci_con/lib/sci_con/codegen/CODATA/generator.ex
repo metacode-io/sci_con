@@ -11,34 +11,32 @@ defmodule SciCon.Codegen.CODATA.Generator do
     rows
     |> build_index(mappings)
     |> Enum.each(fn {category, groups} ->
-      Enum.each(groups, fn {group, entries} ->
-        module_ast = build_module_ast(category, group, entries)
-
-        module_ast
-        |> Macro.to_string()
-        |> Code.format_string!()
-        |> write_module_file(out_dir, category, group)
-      end)
+      category
+      |> build_module_ast(groups)
+      |> Macro.to_string()
+      |> Code.format_string!()
+      |> write_module_file(out_dir, category)
     end)
 
     :ok
   end
 
-  def build_module_ast(category, group, entries) do
-    module_name = module_name(category, group)
+  def build_module_ast(category, groups) do
+    module_name = module_name(category)
 
     moduledoc =
       """
       2022 CODATA Constants
 
       `category`: `#{category}`
-      `group`: `#{inspect(group)}`
       """
       |> String.trim_trailing()
 
-    quoted_constants =
-      Enum.map(entries, fn %{mapping: mapping, metadata: meta} ->
-        constant_ast(mapping, meta)
+    quoted_groups =
+      Enum.flat_map(groups, fn {group, entries} ->
+        Enum.map(entries, fn %{mapping: mapping, metadata: meta} ->
+          constant_ast(mapping, meta, group)
+        end)
       end)
 
     quote do
@@ -47,12 +45,12 @@ defmodule SciCon.Codegen.CODATA.Generator do
 
         alias SciCon.CODATA.Metadata
 
-        unquote_splicing(quoted_constants)
+        unquote_splicing(quoted_groups)
       end
     end
   end
 
-  def constant_ast(%Mapping{} = mapping, %Metadata{} = meta) do
+  def constant_ast(%Mapping{} = mapping, %Metadata{} = meta, group) do
     attr_name_ast = {:@, [], [{mapping.attr_name, [], Elixir}]}
     fun_name = mapping.fun_name
 
@@ -63,6 +61,8 @@ defmodule SciCon.Codegen.CODATA.Generator do
     Relative uncertainty: `#{meta.rel_uncertainty}`
     """
     |> String.trim_trailing()
+
+    groupdoc = "#{group_name(group)}"
 
     quote do
       Module.put_attribute(
@@ -78,31 +78,25 @@ defmodule SciCon.Codegen.CODATA.Generator do
         })
 
       @doc unquote(fundoc)
+      @doc group: unquote(groupdoc)
       def unquote(fun_name)(), do: unquote(attr_name_ast)
     end
   end
 
-  @spec module_name(atom(), atom() | nil) :: Macro.t()
-  def module_name(category, nil) do
+  def module_name(category) do
     Module.concat([SciCon.CODATA, Macro.camelize(to_string(category))])
   end
 
-  def module_name(category, group) do
-    Module.concat([
-      SciCon.CODATA,
-      Macro.camelize(to_string(category)),
-      Macro.camelize(to_string(group))
-    ])
+  def group_name(group) do
+    group
+    |> Atom.to_string()
+    |> String.split("_")
+    |> Enum.map_join(" ", &String.capitalize/1)
   end
 
   # Actually write the generated module to disk
-  defp write_module_file(source, out_dir, category, group) do
-    base =
-      case group do
-        nil -> "#{category}"
-        g -> "#{category}_#{g}"
-      end
-
+  defp write_module_file(source, out_dir, category) do
+    base = "#{category}"
     file_name = (base |> to_string() |> String.downcase()) <> ".ex"
     out_path = Path.join(out_dir, file_name)
 
@@ -119,9 +113,10 @@ defmodule SciCon.Codegen.CODATA.Generator do
   Returns a map `%{category => %{group => [%{mapping: %Maping{}, metadata: %Metadata{}}]}}`
   which can be rendered into modules/files.
   """
-  # @spec build_index([ParsedRow.t()], [Mapping.t()]) ::
-  #   %{atom() => %{atom() | nil => [%{mapping: Mapping.t(), metadata: Metadata.t()}]}}
   def build_index(rows, mappings) do
+    IO.inspect(rows)
+    IO.inspect(mappings)
+
     rows_by_name =
       Map.new(rows, fn row ->
         {row.quantity, row}

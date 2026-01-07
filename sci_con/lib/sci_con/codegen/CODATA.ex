@@ -12,16 +12,10 @@ defmodule SciCon.Codegen.CODATA do
     # get mappings
     mappings = get_codata_mappings()
     # generate code
-    out_dir = Path.join(["lib", "sci_con", "CODATA_test"])
+    out_dir = Path.join(["lib", "sci_con", "CODATA"])
     mappings
     |> Map.values()
-    |> Enum.at(0)
-    |> Generator.generate_files(parsed_data, out_dir)
-    # mappings
-    # |> Map.values()
-    # |> Enum.each(fn category_mappings ->
-    #   Generator.generate_files(parsed_data, category_mappings, out_dir)
-    # end)
+    |> Enum.each(&Generator.generate_files(&1, parsed_data, out_dir))
   end
 
   defp get_codata_mappings() do
