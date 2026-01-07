@@ -35,10 +35,5 @@ defmodule Mix.Tasks.SciCon.Codegen do
       {:error, reason} ->
         Mix.raise("Codegen failed: #{inspect(reason)}")
     end
-
-    #src = SciCon.Codegen.CODATA.Emit.module("SciCon.CODATA.Electromagnetic", mapping, data)
-    #File.write!("lib/sci_con/CODATA/electromagnetic.ex", src)
   end
-
-
 end

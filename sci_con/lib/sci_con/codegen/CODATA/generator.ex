@@ -84,7 +84,7 @@ defmodule SciCon.Codegen.CODATA.Generator do
   end
 
   def module_name(category) do
-    Module.concat([SciCon.CODATA, Macro.camelize(to_string(category))])
+    Module.concat([SciCon.CODATA.Constants, Macro.camelize(to_string(category))])
   end
 
   def group_name(group) do
@@ -114,9 +114,6 @@ defmodule SciCon.Codegen.CODATA.Generator do
   which can be rendered into modules/files.
   """
   def build_index(rows, mappings) do
-    IO.inspect(rows)
-    IO.inspect(mappings)
-
     rows_by_name =
       Map.new(rows, fn row ->
         {row.quantity, row}

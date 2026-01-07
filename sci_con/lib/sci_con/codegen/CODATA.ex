@@ -5,17 +5,14 @@ defmodule SciCon.Codegen.CODATA do
   alias __MODULE__.{Generator, Mappings, Parser, Source}
 
   def run(opts \\ []) do
-    # source the data
-    {:ok, ascii} = Source.ensure_local(2022)
-    # parse the ascii
-    parsed_data = Parser.parse_codata_ascii!(ascii)
-    # get mappings
-    mappings = get_codata_mappings()
-    # generate code
-    out_dir = Path.join(["lib", "sci_con", "CODATA"])
-    mappings
-    |> Map.values()
-    |> Enum.each(&Generator.generate_files(&1, parsed_data, out_dir))
+    with {:ok, ascii} <- Source.ensure_local(2022),              # source the data
+         {:ok, parsed_data} <- Parser.parse_codata_ascii(ascii) do # parse the ascii
+      out_dir = Path.join(["lib", "sci_con", "CODATA", "constants"])
+      mappings = get_codata_mappings()
+      mappings
+      |> Map.values()
+      |> Enum.each(&Generator.generate_files(&1, parsed_data, out_dir))
+    end
   end
 
   defp get_codata_mappings() do

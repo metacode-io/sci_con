@@ -16,6 +16,16 @@ defmodule SciCon.Codegen.CODATA.Parser do
     |> Enum.flat_map(&parse_codata_line/1)
   end
 
+  def parse_codata_ascii(contents) when is_binary(contents) do
+    try do
+      parsed_data = parse_codata_ascii!(contents)
+      {:ok, parsed_data}
+    rescue
+      e ->
+        {:error, e}
+    end
+  end
+
   def drop_front_matter(lines) do
     lines
     # Drop until we find the "Quantity ... Value ..." header
