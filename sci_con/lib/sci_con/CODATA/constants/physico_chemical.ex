@@ -3,121 +3,19 @@ defmodule SciCon.CODATA.Constants.PhysicoChemical do
   alias SciCon.CODATA.Metadata
 
   (
-    Module.put_attribute(__MODULE__, :f, %Metadata{
-      symbol: :f,
-      name: "Faraday constant",
-      value: 96485.33212,
-      unit: "C mol^-1",
+    Module.put_attribute(__MODULE__, :n_a_h, %Metadata{
+      symbol: :n_a_h,
+      name: "molar Planck constant",
+      value: 3.990312712e-10,
+      unit: "J Hz^-1 mol^-1",
       uncertainty: :exact,
       rel_uncertainty: :exact
     })
 
-    @doc "CODATA 2022 value for Faraday constant.\n\nUnit: `C mol^-1`\nRelative uncertainty: `exact`"
-    @doc group: "Mass Molar"
-    def faraday_constant() do
-      @f
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :n_a, %Metadata{
-      symbol: :n_a,
-      name: "Avogadro constant",
-      value: 6.02214076e23,
-      unit: "mol^-1",
-      uncertainty: :exact,
-      rel_uncertainty: :exact
-    })
-
-    @doc "CODATA 2022 value for Avogadro constant.\n\nUnit: `mol^-1`\nRelative uncertainty: `exact`"
-    @doc group: "Mass Molar"
-    def avogadro_constant() do
-      @n_a
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :mm_c12, %Metadata{
-      symbol: :mm_c12,
-      name: "molar mass of carbon-12",
-      value: 0.0120000000126,
-      unit: "kg mol^-1",
-      uncertainty: 3.7e-12,
-      rel_uncertainty: 3.0833333300958334e-10
-    })
-
-    @doc "CODATA 2022 value for molar mass of carbon-12.\n\nUnit: `kg mol^-1`\nRelative uncertainty: `3.0833333300958334e-10`"
-    @doc group: "Mass Molar"
-    def molar_mass_carbon12() do
-      @mm_c12
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :mm_u, %Metadata{
-      symbol: :mm_u,
-      name: "molar mass constant",
-      value: 0.00100000000105,
-      unit: "kg mol^-1",
-      uncertainty: 3.1e-13,
-      rel_uncertainty: 3.099999996745e-10
-    })
-
-    @doc "CODATA 2022 value for molar mass constant.\n\nUnit: `kg mol^-1`\nRelative uncertainty: `3.099999996745e-10`"
-    @doc group: "Mass Molar"
-    def molar_mass_constant() do
-      @mm_u
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_u_c2_mev, %Metadata{
-      symbol: :m_u_c2_mev,
-      name: "atomic mass constant energy equivalent in MeV",
-      value: 931.49410372,
-      unit: "MeV",
-      uncertainty: 2.9e-7,
-      rel_uncertainty: 3.1132778923866573e-10
-    })
-
-    @doc "CODATA 2022 value for atomic mass constant energy equivalent in MeV.\n\nUnit: `MeV`\nRelative uncertainty: `3.1132778923866573e-10`"
-    @doc group: "Mass Molar"
-    def atomic_mass_energy_mev() do
-      @m_u_c2_mev
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_u_c2, %Metadata{
-      symbol: :m_u_c2,
-      name: "atomic mass constant energy equivalent",
-      value: 1.49241808768e-10,
-      unit: "J",
-      uncertainty: 4.6e-20,
-      rel_uncertainty: 3.082246213693919e-10
-    })
-
-    @doc "CODATA 2022 value for atomic mass constant energy equivalent.\n\nUnit: `J`\nRelative uncertainty: `3.082246213693919e-10`"
-    @doc group: "Mass Molar"
-    def atomic_mass_energy() do
-      @m_u_c2
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :am_u, %Metadata{
-      symbol: :am_u,
-      name: "atomic mass constant",
-      value: 1.66053906892e-27,
-      unit: "kg",
-      uncertainty: 5.2e-37,
-      rel_uncertainty: 3.1315131919070317e-10
-    })
-
-    @doc "CODATA 2022 value for atomic mass constant.\n\nUnit: `kg`\nRelative uncertainty: `3.1315131919070317e-10`"
-    @doc group: "Mass Molar"
-    def atomic_mass_constant() do
-      @am_u
+    @doc "CODATA 2022 value for molar Planck constant.\n\nUnit: `J Hz^-1 mol^-1`\nRelative uncertainty: `exact`"
+    @doc group: "Quantum Molar"
+    def molar_planck_constant() do
+      @n_a_h
     end
   )
 
@@ -411,19 +309,121 @@ defmodule SciCon.CODATA.Constants.PhysicoChemical do
   )
 
   (
-    Module.put_attribute(__MODULE__, :n_a_h, %Metadata{
-      symbol: :n_a_h,
-      name: "molar Planck constant",
-      value: 3.990312712e-10,
-      unit: "J Hz^-1 mol^-1",
+    Module.put_attribute(__MODULE__, :f, %Metadata{
+      symbol: :f,
+      name: "Faraday constant",
+      value: 96485.33212,
+      unit: "C mol^-1",
       uncertainty: :exact,
       rel_uncertainty: :exact
     })
 
-    @doc "CODATA 2022 value for molar Planck constant.\n\nUnit: `J Hz^-1 mol^-1`\nRelative uncertainty: `exact`"
-    @doc group: "Quantum Molar"
-    def molar_planck_constant() do
-      @n_a_h
+    @doc "CODATA 2022 value for Faraday constant.\n\nUnit: `C mol^-1`\nRelative uncertainty: `exact`"
+    @doc group: "Mass Molar"
+    def faraday_constant() do
+      @f
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :n_a, %Metadata{
+      symbol: :n_a,
+      name: "Avogadro constant",
+      value: 6.02214076e23,
+      unit: "mol^-1",
+      uncertainty: :exact,
+      rel_uncertainty: :exact
+    })
+
+    @doc "CODATA 2022 value for Avogadro constant.\n\nUnit: `mol^-1`\nRelative uncertainty: `exact`"
+    @doc group: "Mass Molar"
+    def avogadro_constant() do
+      @n_a
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :mm_c12, %Metadata{
+      symbol: :mm_c12,
+      name: "molar mass of carbon-12",
+      value: 0.0120000000126,
+      unit: "kg mol^-1",
+      uncertainty: 3.7e-12,
+      rel_uncertainty: 3.0833333300958334e-10
+    })
+
+    @doc "CODATA 2022 value for molar mass of carbon-12.\n\nUnit: `kg mol^-1`\nRelative uncertainty: `3.0833333300958334e-10`"
+    @doc group: "Mass Molar"
+    def molar_mass_carbon12() do
+      @mm_c12
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :mm_u, %Metadata{
+      symbol: :mm_u,
+      name: "molar mass constant",
+      value: 0.00100000000105,
+      unit: "kg mol^-1",
+      uncertainty: 3.1e-13,
+      rel_uncertainty: 3.099999996745e-10
+    })
+
+    @doc "CODATA 2022 value for molar mass constant.\n\nUnit: `kg mol^-1`\nRelative uncertainty: `3.099999996745e-10`"
+    @doc group: "Mass Molar"
+    def molar_mass_constant() do
+      @mm_u
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_u_c2_mev, %Metadata{
+      symbol: :m_u_c2_mev,
+      name: "atomic mass constant energy equivalent in MeV",
+      value: 931.49410372,
+      unit: "MeV",
+      uncertainty: 2.9e-7,
+      rel_uncertainty: 3.1132778923866573e-10
+    })
+
+    @doc "CODATA 2022 value for atomic mass constant energy equivalent in MeV.\n\nUnit: `MeV`\nRelative uncertainty: `3.1132778923866573e-10`"
+    @doc group: "Mass Molar"
+    def atomic_mass_energy_mev() do
+      @m_u_c2_mev
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_u_c2, %Metadata{
+      symbol: :m_u_c2,
+      name: "atomic mass constant energy equivalent",
+      value: 1.49241808768e-10,
+      unit: "J",
+      uncertainty: 4.6e-20,
+      rel_uncertainty: 3.082246213693919e-10
+    })
+
+    @doc "CODATA 2022 value for atomic mass constant energy equivalent.\n\nUnit: `J`\nRelative uncertainty: `3.082246213693919e-10`"
+    @doc group: "Mass Molar"
+    def atomic_mass_energy() do
+      @m_u_c2
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :am_u, %Metadata{
+      symbol: :am_u,
+      name: "atomic mass constant",
+      value: 1.66053906892e-27,
+      unit: "kg",
+      uncertainty: 5.2e-37,
+      rel_uncertainty: 3.1315131919070317e-10
+    })
+
+    @doc "CODATA 2022 value for atomic mass constant.\n\nUnit: `kg`\nRelative uncertainty: `3.1315131919070317e-10`"
+    @doc group: "Mass Molar"
+    def atomic_mass_constant() do
+      @am_u
     end
   )
 end

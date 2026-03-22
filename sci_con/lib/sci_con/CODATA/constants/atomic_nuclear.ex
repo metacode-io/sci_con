@@ -3,6 +3,839 @@ defmodule SciCon.CODATA.Constants.AtomicNuclear do
   alias SciCon.CODATA.Metadata
 
   (
+    Module.put_attribute(__MODULE__, :twice_pi_hbar_over_m_e, %Metadata{
+      symbol: :twice_pi_hbar_over_m_e,
+      name: "quantum of circulation times 2",
+      value: 7.2738950934e-4,
+      unit: "m^2 s^-1",
+      uncertainty: 2.3e-13,
+      rel_uncertainty: 3.161992262009545e-10
+    })
+
+    @doc "CODATA 2022 value for quantum of circulation times 2.\n\nUnit: `m^2 s^-1`\nRelative uncertainty: `3.161992262009545e-10`"
+    @doc group: "Miscellaneous"
+    def quantum_of_circulation_times_two() do
+      @twice_pi_hbar_over_m_e
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :pi_hbar_over_m_e, %Metadata{
+      symbol: :pi_hbar_over_m_e,
+      name: "quantum of circulation",
+      value: 3.6369475467e-4,
+      unit: "m^2 s^-1",
+      uncertainty: 1.1e-13,
+      rel_uncertainty: 3.024514337574348e-10
+    })
+
+    @doc "CODATA 2022 value for quantum of circulation.\n\nUnit: `m^2 s^-1`\nRelative uncertainty: `3.024514337574348e-10`"
+    @doc group: "Miscellaneous"
+    def quantum_of_circulation() do
+      @pi_hbar_over_m_e
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :sigma_e, %Metadata{
+      symbol: :sigma_e,
+      name: "Thomson cross section",
+      value: 6.6524587051e-29,
+      unit: "m^2",
+      uncertainty: 6.2e-38,
+      rel_uncertainty: 9.319862437096933e-10
+    })
+
+    @doc "CODATA 2022 value for Thomson cross section.\n\nUnit: `m^2`\nRelative uncertainty: `9.319862437096933e-10`"
+    @doc group: "Miscellaneous"
+    def thomson_cross_section() do
+      @sigma_e
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :sin2_theta_w, %Metadata{
+      symbol: :sin2_theta_w,
+      name: "weak mixing angle",
+      value: 0.22305,
+      unit: :dimensionless,
+      uncertainty: 2.3e-4,
+      rel_uncertainty: 0.0010311589329746694
+    })
+
+    @doc "CODATA 2022 value for weak mixing angle.\n\nUnit: `dimensionless`\nRelative uncertainty: `0.0010311589329746694`"
+    @doc group: "Fundamental Interactions"
+    def weak_mixing_angle() do
+      @sin2_theta_w
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :alpha_inv, %Metadata{
+      symbol: :alpha_inv,
+      name: "inverse fine-structure constant",
+      value: 137.035999177,
+      unit: :dimensionless,
+      uncertainty: 2.1e-8,
+      rel_uncertainty: 1.532444038509599e-10
+    })
+
+    @doc "CODATA 2022 value for inverse fine-structure constant.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.532444038509599e-10`"
+    @doc group: "Fundamental Interactions"
+    def inverse_fine_structure_constant() do
+      @alpha_inv
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :alpha, %Metadata{
+      symbol: :alpha,
+      name: "fine-structure constant",
+      value: 0.0072973525643,
+      unit: :dimensionless,
+      uncertainty: 1.1e-12,
+      rel_uncertainty: 1.5073959909534913e-10
+    })
+
+    @doc "CODATA 2022 value for fine-structure constant.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.5073959909534913e-10`"
+    @doc group: "Fundamental Interactions"
+    def fine_structure_constant() do
+      @alpha
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :g_f_over_hbar_c3, %Metadata{
+      symbol: :g_f_over_hbar_c3,
+      name: "Fermi coupling constant",
+      value: 1.1663787e-5,
+      unit: "GeV^-2",
+      uncertainty: 6.0e-12,
+      rel_uncertainty: 5.144126860341328e-7
+    })
+
+    @doc "CODATA 2022 value for Fermi coupling constant.\n\nUnit: `GeV^-2`\nRelative uncertainty: `5.144126860341328e-7`"
+    @doc group: "Fundamental Interactions"
+    def fermi_coupling_constant() do
+      @g_f_over_hbar_c3
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_t_over_m_p, %Metadata{
+      symbol: :m_t_over_m_p,
+      name: "triton-proton mass ratio",
+      value: 2.99371703403,
+      unit: :dimensionless,
+      uncertainty: 1.0e-10,
+      rel_uncertainty: 3.340329057933199e-11
+    })
+
+    @doc "CODATA 2022 value for triton-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `3.340329057933199e-11`"
+    @doc group: "Mass Ratios"
+    def triton_proton_mass_ratio() do
+      @m_t_over_m_p
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_t_over_m_e, %Metadata{
+      symbol: :m_t_over_m_e,
+      name: "triton-electron mass ratio",
+      value: 5496.92153551,
+      unit: :dimensionless,
+      uncertainty: 2.1e-7,
+      rel_uncertainty: 3.8203201308842474e-11
+    })
+
+    @doc "CODATA 2022 value for triton-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `3.8203201308842474e-11`"
+    @doc group: "Mass Ratios"
+    def triton_electron_mass_ratio() do
+      @m_t_over_m_e
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_tau_over_m_p, %Metadata{
+      symbol: :m_tau_over_m_p,
+      name: "tau-proton mass ratio",
+      value: 1.89376,
+      unit: :dimensionless,
+      uncertainty: 1.3e-4,
+      rel_uncertainty: 6.864650219668806e-5
+    })
+
+    @doc "CODATA 2022 value for tau-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.864650219668806e-5`"
+    @doc group: "Mass Ratios"
+    def tau_proton_mass_ratio() do
+      @m_tau_over_m_p
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_tau_over_m_n, %Metadata{
+      symbol: :m_tau_over_m_n,
+      name: "tau-neutron mass ratio",
+      value: 1.89115,
+      unit: :dimensionless,
+      uncertainty: 1.3e-4,
+      rel_uncertainty: 6.874124210136688e-5
+    })
+
+    @doc "CODATA 2022 value for tau-neutron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.874124210136688e-5`"
+    @doc group: "Mass Ratios"
+    def tau_neutron_mass_ratio() do
+      @m_tau_over_m_n
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_tau_over_m_mu, %Metadata{
+      symbol: :m_tau_over_m_mu,
+      name: "tau-muon mass ratio",
+      value: 16.817,
+      unit: :dimensionless,
+      uncertainty: 0.0011,
+      rel_uncertainty: 6.541000178390915e-5
+    })
+
+    @doc "CODATA 2022 value for tau-muon mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.541000178390915e-5`"
+    @doc group: "Mass Ratios"
+    def tau_muon_mass_ratio() do
+      @m_tau_over_m_mu
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_tau_over_m_e, %Metadata{
+      symbol: :m_tau_over_m_e,
+      name: "tau-electron mass ratio",
+      value: 3477.23,
+      unit: :dimensionless,
+      uncertainty: 0.23,
+      rel_uncertainty: 6.6144603606894e-5
+    })
+
+    @doc "CODATA 2022 value for tau-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.6144603606894e-5`"
+    @doc group: "Mass Ratios"
+    def tau_electron_mass_ratio() do
+      @m_tau_over_m_e
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_p_over_m_tau, %Metadata{
+      symbol: :m_p_over_m_tau,
+      name: "proton-tau mass ratio",
+      value: 0.528051,
+      unit: :dimensionless,
+      uncertainty: 3.6e-5,
+      rel_uncertainty: 6.817523307407807e-5
+    })
+
+    @doc "CODATA 2022 value for proton-tau mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.817523307407807e-5`"
+    @doc group: "Mass Ratios"
+    def proton_tau_mass_ratio() do
+      @m_p_over_m_tau
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_p_over_m_n, %Metadata{
+      symbol: :m_p_over_m_n,
+      name: "proton-neutron mass ratio",
+      value: 0.99862347797,
+      unit: :dimensionless,
+      uncertainty: 4.0e-10,
+      rel_uncertainty: 4.0055136778189847e-10
+    })
+
+    @doc "CODATA 2022 value for proton-neutron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `4.0055136778189847e-10`"
+    @doc group: "Mass Ratios"
+    def proton_neutron_mass_ratio() do
+      @m_p_over_m_n
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_p_over_m_mu, %Metadata{
+      symbol: :m_p_over_m_mu,
+      name: "proton-muon mass ratio",
+      value: 8.88024338,
+      unit: :dimensionless,
+      uncertainty: 2.0e-7,
+      rel_uncertainty: 2.2521905249853637e-8
+    })
+
+    @doc "CODATA 2022 value for proton-muon mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.2521905249853637e-8`"
+    @doc group: "Mass Ratios"
+    def proton_muon_mass_ratio() do
+      @m_p_over_m_mu
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_p_over_m_e, %Metadata{
+      symbol: :m_p_over_m_e,
+      name: "proton-electron mass ratio",
+      value: 1836.152673426,
+      unit: :dimensionless,
+      uncertainty: 3.2e-8,
+      rel_uncertainty: 1.7427744687642204e-11
+    })
+
+    @doc "CODATA 2022 value for proton-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.7427744687642204e-11`"
+    @doc group: "Mass Ratios"
+    def proton_electron_mass_ratio() do
+      @m_p_over_m_e
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_n_over_m_tau, %Metadata{
+      symbol: :m_n_over_m_tau,
+      name: "neutron-tau mass ratio",
+      value: 0.528779,
+      unit: :dimensionless,
+      uncertainty: 3.6e-5,
+      rel_uncertainty: 6.808137236917502e-5
+    })
+
+    @doc "CODATA 2022 value for neutron-tau mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.808137236917502e-5`"
+    @doc group: "Mass Ratios"
+    def neutron_tau_mass_ratio() do
+      @m_n_over_m_tau
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_n_over_m_p, %Metadata{
+      symbol: :m_n_over_m_p,
+      name: "neutron-proton mass ratio",
+      value: 1.00137841946,
+      unit: :dimensionless,
+      uncertainty: 4.0e-10,
+      rel_uncertainty: 3.994493911859042e-10
+    })
+
+    @doc "CODATA 2022 value for neutron-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `3.994493911859042e-10`"
+    @doc group: "Mass Ratios"
+    def neutron_proton_mass_ratio() do
+      @m_n_over_m_p
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_n_over_m_mu, %Metadata{
+      symbol: :m_n_over_m_mu,
+      name: "neutron-muon mass ratio",
+      value: 8.89248408,
+      unit: :dimensionless,
+      uncertainty: 2.0e-7,
+      rel_uncertainty: 2.2490903351721268e-8
+    })
+
+    @doc "CODATA 2022 value for neutron-muon mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.2490903351721268e-8`"
+    @doc group: "Mass Ratios"
+    def neutron_muon_mass_ratio() do
+      @m_n_over_m_mu
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_n_over_m_e, %Metadata{
+      symbol: :m_n_over_m_e,
+      name: "neutron-electron mass ratio",
+      value: 1838.683662,
+      unit: :dimensionless,
+      uncertainty: 7.4e-7,
+      rel_uncertainty: 4.0246183467746504e-10
+    })
+
+    @doc "CODATA 2022 value for neutron-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `4.0246183467746504e-10`"
+    @doc group: "Mass Ratios"
+    def neutron_electron_mass_ratio() do
+      @m_n_over_m_e
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_mu_over_m_tau, %Metadata{
+      symbol: :m_mu_over_m_tau,
+      name: "muon-tau mass ratio",
+      value: 0.0594635,
+      unit: :dimensionless,
+      uncertainty: 4.0e-6,
+      rel_uncertainty: 6.726815609575621e-5
+    })
+
+    @doc "CODATA 2022 value for muon-tau mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.726815609575621e-5`"
+    @doc group: "Mass Ratios"
+    def muon_tau_mass_ratio() do
+      @m_mu_over_m_tau
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_mu_over_m_p, %Metadata{
+      symbol: :m_mu_over_m_p,
+      name: "muon-proton mass ratio",
+      value: 0.1126095262,
+      unit: :dimensionless,
+      uncertainty: 2.5e-9,
+      rel_uncertainty: 2.2200608459713066e-8
+    })
+
+    @doc "CODATA 2022 value for muon-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.2200608459713066e-8`"
+    @doc group: "Mass Ratios"
+    def muon_proton_mass_ratio() do
+      @m_mu_over_m_p
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_mu_over_m_n, %Metadata{
+      symbol: :m_mu_over_m_n,
+      name: "muon-neutron mass ratio",
+      value: 0.1124545168,
+      unit: :dimensionless,
+      uncertainty: 2.5e-9,
+      rel_uncertainty: 2.2231210191816858e-8
+    })
+
+    @doc "CODATA 2022 value for muon-neutron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.2231210191816858e-8`"
+    @doc group: "Mass Ratios"
+    def muon_neutron_mass_ratio() do
+      @m_mu_over_m_n
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_mu_over_m_e, %Metadata{
+      symbol: :m_mu_over_m_e,
+      name: "muon-electron mass ratio",
+      value: 206.7682827,
+      unit: :dimensionless,
+      uncertainty: 4.6e-6,
+      rel_uncertainty: 2.2247125816071793e-8
+    })
+
+    @doc "CODATA 2022 value for muon-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.2247125816071793e-8`"
+    @doc group: "Mass Ratios"
+    def muon_electron_mass_ratio() do
+      @m_mu_over_m_e
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_h_over_m_p, %Metadata{
+      symbol: :m_h_over_m_p,
+      name: "helion-proton mass ratio",
+      value: 2.993152671552,
+      unit: :dimensionless,
+      uncertainty: 7.0e-11,
+      rel_uncertainty: 2.338671216650764e-11
+    })
+
+    @doc "CODATA 2022 value for helion-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.338671216650764e-11`"
+    @doc group: "Mass Ratios"
+    def helion_proton_mass_ratio() do
+      @m_h_over_m_p
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_h_over_m_e, %Metadata{
+      symbol: :m_h_over_m_e,
+      name: "helion-electron mass ratio",
+      value: 5495.88527984,
+      unit: :dimensionless,
+      uncertainty: 1.6e-7,
+      rel_uncertainty: 2.9112689194389084e-11
+    })
+
+    @doc "CODATA 2022 value for helion-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.9112689194389084e-11`"
+    @doc group: "Mass Ratios"
+    def helion_electron_mass_ratio() do
+      @m_h_over_m_e
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_e_over_m_t, %Metadata{
+      symbol: :m_e_over_m_t,
+      name: "electron-triton mass ratio",
+      value: 1.819200062327e-4,
+      unit: :dimensionless,
+      uncertainty: 6.8e-15,
+      rel_uncertainty: 3.7379066441444e-11
+    })
+
+    @doc "CODATA 2022 value for electron-triton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `3.7379066441444e-11`"
+    @doc group: "Mass Ratios"
+    def electron_triton_mass_ratio() do
+      @m_e_over_m_t
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_e_over_m_tau, %Metadata{
+      symbol: :m_e_over_m_tau,
+      name: "electron-tau mass ratio",
+      value: 2.87585e-4,
+      unit: :dimensionless,
+      uncertainty: 1.9e-8,
+      rel_uncertainty: 6.606742354434343e-5
+    })
+
+    @doc "CODATA 2022 value for electron-tau mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.606742354434343e-5`"
+    @doc group: "Mass Ratios"
+    def electron_tau_mass_ratio() do
+      @m_e_over_m_tau
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_e_over_m_p, %Metadata{
+      symbol: :m_e_over_m_p,
+      name: "electron-proton mass ratio",
+      value: 5.446170214889e-4,
+      unit: :dimensionless,
+      uncertainty: 9.4e-15,
+      rel_uncertainty: 1.7259835130201827e-11
+    })
+
+    @doc "CODATA 2022 value for electron-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.7259835130201827e-11`"
+    @doc group: "Mass Ratios"
+    def electron_proton_mass_ratio() do
+      @m_e_over_m_p
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_e_over_m_n, %Metadata{
+      symbol: :m_e_over_m_n,
+      name: "electron-neutron mass ratio",
+      value: 5.4386734416e-4,
+      unit: :dimensionless,
+      uncertainty: 2.2e-13,
+      rel_uncertainty: 4.0451040563906023e-10
+    })
+
+    @doc "CODATA 2022 value for electron-neutron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `4.0451040563906023e-10`"
+    @doc group: "Mass Ratios"
+    def electron_neutron_mass_ratio() do
+      @m_e_over_m_n
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_e_over_m_u, %Metadata{
+      symbol: :m_e_over_m_u,
+      name: "electron-muon mass ratio",
+      value: 0.0048363317,
+      unit: :dimensionless,
+      uncertainty: 1.1e-10,
+      rel_uncertainty: 2.2744511092983964e-8
+    })
+
+    @doc "CODATA 2022 value for electron-muon mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.2744511092983964e-8`"
+    @doc group: "Mass Ratios"
+    def electron_muon_mass_ratio() do
+      @m_e_over_m_u
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_e_over_m_h, %Metadata{
+      symbol: :m_e_over_m_h,
+      name: "electron-helion mass ratio",
+      value: 1.819543074649e-4,
+      unit: :dimensionless,
+      uncertainty: 5.3e-15,
+      rel_uncertainty: 2.912819198315709e-11
+    })
+
+    @doc "CODATA 2022 value for electron-helion mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.912819198315709e-11`"
+    @doc group: "Mass Ratios"
+    def electron_helion_mass_ratio() do
+      @m_e_over_m_h
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_e_over_m_d, %Metadata{
+      symbol: :m_e_over_m_d,
+      name: "electron-deuteron mass ratio",
+      value: 2.724437107629e-4,
+      unit: :dimensionless,
+      uncertainty: 4.7e-15,
+      rel_uncertainty: 1.7251269947979366e-11
+    })
+
+    @doc "CODATA 2022 value for electron-deuteron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.7251269947979366e-11`"
+    @doc group: "Mass Ratios"
+    def electron_deuteron_mass_ratio() do
+      @m_e_over_m_d
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_e_over_m_alpha, %Metadata{
+      symbol: :m_e_over_m_alpha,
+      name: "electron to alpha particle mass ratio",
+      value: 1.370933554733e-4,
+      unit: :dimensionless,
+      uncertainty: 3.2e-15,
+      rel_uncertainty: 2.3341758533463172e-11
+    })
+
+    @doc "CODATA 2022 value for electron to alpha particle mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.3341758533463172e-11`"
+    @doc group: "Mass Ratios"
+    def electron_alpha_particle_mass_ratio() do
+      @m_e_over_m_alpha
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_d_over_m_p, %Metadata{
+      symbol: :m_d_over_m_p,
+      name: "deuteron-proton mass ratio",
+      value: 1.9990075012699,
+      unit: :dimensionless,
+      uncertainty: 8.4e-12,
+      rel_uncertainty: 4.202085282153154e-12
+    })
+
+    @doc "CODATA 2022 value for deuteron-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `4.202085282153154e-12`"
+    @doc group: "Mass Ratios"
+    def deuteron_proton_mass_ratio() do
+      @m_d_over_m_p
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_d_over_m_e, %Metadata{
+      symbol: :m_d_over_m_e,
+      name: "deuteron-electron mass ratio",
+      value: 3670.482967655,
+      unit: :dimensionless,
+      uncertainty: 6.3e-8,
+      rel_uncertainty: 1.7163953778063564e-11
+    })
+
+    @doc "CODATA 2022 value for deuteron-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.7163953778063564e-11`"
+    @doc group: "Mass Ratios"
+    def deuteron_electron_mass_ratio() do
+      @m_d_over_m_e
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_alpha_over_m_p, %Metadata{
+      symbol: :m_alpha_over_m_p,
+      name: "alpha particle-proton mass ratio",
+      value: 3.972599690252,
+      unit: :dimensionless,
+      uncertainty: 7.0e-11,
+      rel_uncertainty: 1.7620703181286204e-11
+    })
+
+    @doc "CODATA 2022 value for alpha particle-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.7620703181286204e-11`"
+    @doc group: "Mass Ratios"
+    def alpha_particle_proton_mass_ratio() do
+      @m_alpha_over_m_p
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_alpha_over_m_e, %Metadata{
+      symbol: :m_alpha_over_m_e,
+      name: "alpha particle-electron mass ratio",
+      value: 7294.29954171,
+      unit: :dimensionless,
+      uncertainty: 1.7e-7,
+      rel_uncertainty: 2.330587043045218e-11
+    })
+
+    @doc "CODATA 2022 value for alpha particle-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.330587043045218e-11`"
+    @doc group: "Mass Ratios"
+    def alpha_particle_electron_mass_ratio() do
+      @m_alpha_over_m_e
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :lambda_bar_c_n, %Metadata{
+      symbol: :lambda_bar_c_n,
+      name: "reduced neutron Compton wavelength",
+      value: 2.100194152e-16,
+      unit: "m",
+      uncertainty: 1.1e-25,
+      rel_uncertainty: 5.237611003499261e-10
+    })
+
+    @doc "CODATA 2022 value for reduced neutron Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `5.237611003499261e-10`"
+    @doc group: "Compton Wavelengths"
+    def neutron_compton_wavelength_reduced() do
+      @lambda_bar_c_n
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :lambda_c_n, %Metadata{
+      symbol: :lambda_c_n,
+      name: "neutron Compton wavelength",
+      value: 1.31959090382e-15,
+      unit: "m",
+      uncertainty: 6.7e-25,
+      rel_uncertainty: 5.077331149074001e-10
+    })
+
+    @doc "CODATA 2022 value for neutron Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `5.077331149074001e-10`"
+    @doc group: "Compton Wavelengths"
+    def neutron_compton_wavelength() do
+      @lambda_c_n
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :lambda_bar_c_p, %Metadata{
+      symbol: :lambda_bar_c_p,
+      name: "reduced proton Compton wavelength",
+      value: 2.10308910051e-16,
+      unit: "m",
+      uncertainty: 6.6e-26,
+      rel_uncertainty: 3.138240789893066e-10
+    })
+
+    @doc "CODATA 2022 value for reduced proton Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `3.138240789893066e-10`"
+    @doc group: "Compton Wavelengths"
+    def proton_compton_wavelength_reduced() do
+      @lambda_bar_c_p
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :lambda_c_p, %Metadata{
+      symbol: :lambda_c_p,
+      name: "proton Compton wavelength",
+      value: 1.3214098536e-15,
+      unit: "m",
+      uncertainty: 4.1e-25,
+      rel_uncertainty: 3.1027466526226604e-10
+    })
+
+    @doc "CODATA 2022 value for proton Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `3.1027466526226604e-10`"
+    @doc group: "Compton Wavelengths"
+    def proton_compton_wavelength() do
+      @lambda_c_p
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :lambda_bar_c_tau, %Metadata{
+      symbol: :lambda_bar_c_tau,
+      name: "reduced tau Compton wavelength",
+      value: 1.110538e-16,
+      unit: "m",
+      uncertainty: 7.5e-21,
+      rel_uncertainty: 6.75348344676184e-5
+    })
+
+    @doc "CODATA 2022 value for reduced tau Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `6.75348344676184e-5`"
+    @doc group: "Compton Wavelengths"
+    def tau_compton_wavelength_reduced() do
+      @lambda_bar_c_tau
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :lambda_c_tau, %Metadata{
+      symbol: :lambda_c_tau,
+      name: "tau Compton wavelength",
+      value: 6.97771e-16,
+      unit: "m",
+      uncertainty: 4.7e-20,
+      rel_uncertainty: 6.735734216526625e-5
+    })
+
+    @doc "CODATA 2022 value for tau Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `6.735734216526625e-5`"
+    @doc group: "Compton Wavelengths"
+    def tau_compton_wavelength() do
+      @lambda_c_tau
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :lambda_bar_c_mu, %Metadata{
+      symbol: :lambda_bar_c_mu,
+      name: "reduced muon Compton wavelength",
+      value: 1.867594306e-15,
+      unit: "m",
+      uncertainty: 4.2e-23,
+      rel_uncertainty: 2.2488824186852067e-8
+    })
+
+    @doc "CODATA 2022 value for reduced muon Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `2.2488824186852067e-8`"
+    @doc group: "Compton Wavelengths"
+    def muon_compton_wavelength_reduced() do
+      @lambda_bar_c_mu
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :lambda_c_mu, %Metadata{
+      symbol: :lambda_c_mu,
+      name: "muon Compton wavelength",
+      value: 1.17344411e-14,
+      unit: "m",
+      uncertainty: 2.6e-22,
+      rel_uncertainty: 2.215699902400976e-8
+    })
+
+    @doc "CODATA 2022 value for muon Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `2.215699902400976e-8`"
+    @doc group: "Compton Wavelengths"
+    def muon_compton_wavelength() do
+      @lambda_c_mu
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :lambda_bar_c, %Metadata{
+      symbol: :lambda_bar_c,
+      name: "reduced Compton wavelength",
+      value: 3.8615926744e-13,
+      unit: "m",
+      uncertainty: 1.2e-22,
+      rel_uncertainty: 3.1075260939748173e-10
+    })
+
+    @doc "CODATA 2022 value for reduced Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `3.1075260939748173e-10`"
+    @doc group: "Compton Wavelengths"
+    def compton_wavelength_reduced() do
+      @lambda_bar_c
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :lambda_c, %Metadata{
+      symbol: :lambda_c,
+      name: "Compton wavelength",
+      value: 2.42631023538e-12,
+      unit: "m",
+      uncertainty: 7.6e-22,
+      rel_uncertainty: 3.132328211445605e-10
+    })
+
+    @doc "CODATA 2022 value for Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `3.132328211445605e-10`"
+    @doc group: "Compton Wavelengths"
+    def compton_wavelength() do
+      @lambda_c
+    end
+  )
+
+  (
     Module.put_attribute(__MODULE__, :r_e, %Metadata{
       symbol: :r_e,
       name: "classical electron radius",
@@ -135,380 +968,6 @@ defmodule SciCon.CODATA.Constants.AtomicNuclear do
     @doc group: "Atomic Structure"
     def bohr_radius() do
       @a_0
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_tau_c2_in_mev, %Metadata{
-      symbol: :m_tau_c2_in_mev,
-      name: "tau energy equivalent",
-      value: 1776.86,
-      unit: "MeV",
-      uncertainty: 0.12,
-      rel_uncertainty: 6.75348648739912e-5
-    })
-
-    @doc "CODATA 2022 value for tau energy equivalent.\n\nUnit: `MeV`\nRelative uncertainty: `6.75348648739912e-5`"
-    @doc group: "Leptons"
-    def tau_mass_energy_mev() do
-      @m_tau_c2_in_mev
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :big_m_tau, %Metadata{
-      symbol: :big_m_tau,
-      name: "tau molar mass",
-      value: 0.00190754,
-      unit: "kg mol^-1",
-      uncertainty: 1.3e-7,
-      rel_uncertainty: 6.815060234647766e-5
-    })
-
-    @doc "CODATA 2022 value for tau molar mass.\n\nUnit: `kg mol^-1`\nRelative uncertainty: `6.815060234647766e-5`"
-    @doc group: "Leptons"
-    def tau_molar_mass() do
-      @big_m_tau
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_tau_in_u, %Metadata{
-      symbol: :m_tau_in_u,
-      name: "tau mass in u",
-      value: 1.90754,
-      unit: "u",
-      uncertainty: 1.3e-4,
-      rel_uncertainty: 6.815060234647766e-5
-    })
-
-    @doc "CODATA 2022 value for tau mass in u.\n\nUnit: `u`\nRelative uncertainty: `6.815060234647766e-5`"
-    @doc group: "Leptons"
-    def tau_mass_u() do
-      @m_tau_in_u
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_tau_c2, %Metadata{
-      symbol: :m_tau_c2,
-      name: "tau mass energy equivalent",
-      value: 2.84684e-10,
-      unit: "J",
-      uncertainty: 1.9e-14,
-      rel_uncertainty: 6.674066684464179e-5
-    })
-
-    @doc "CODATA 2022 value for tau mass energy equivalent.\n\nUnit: `J`\nRelative uncertainty: `6.674066684464179e-5`"
-    @doc group: "Leptons"
-    def tau_mass_energy() do
-      @m_tau_c2
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_tau, %Metadata{
-      symbol: :m_tau,
-      name: "tau mass",
-      value: 3.16754e-27,
-      unit: "kg",
-      uncertainty: 2.1e-31,
-      rel_uncertainty: 6.629750531958555e-5
-    })
-
-    @doc "CODATA 2022 value for tau mass.\n\nUnit: `kg`\nRelative uncertainty: `6.629750531958555e-5`"
-    @doc group: "Leptons"
-    def tau_mass() do
-      @m_tau
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :big_m_mu, %Metadata{
-      symbol: :big_m_mu,
-      name: "muon molar mass",
-      value: 1.134289258e-4,
-      unit: "kg mol^-1",
-      uncertainty: 2.5e-12,
-      rel_uncertainty: 2.2040233409316124e-8
-    })
-
-    @doc "CODATA 2022 value for muon molar mass.\n\nUnit: `kg mol^-1`\nRelative uncertainty: `2.2040233409316124e-8`"
-    @doc group: "Leptons"
-    def muon_molar_mass() do
-      @big_m_mu
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_mu_in_u, %Metadata{
-      symbol: :m_mu_in_u,
-      name: "muon mass in u",
-      value: 0.1134289257,
-      unit: "u",
-      uncertainty: 2.5e-9,
-      rel_uncertainty: 2.2040233428747004e-8
-    })
-
-    @doc "CODATA 2022 value for muon mass in u.\n\nUnit: `u`\nRelative uncertainty: `2.2040233428747004e-8`"
-    @doc group: "Leptons"
-    def muon_mass_u() do
-      @m_mu_in_u
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_mu_c2_in_mev, %Metadata{
-      symbol: :m_mu_c2_in_mev,
-      name: "muon mass energy equivalent in MeV",
-      value: 105.6583755,
-      unit: "MeV",
-      uncertainty: 2.3e-6,
-      rel_uncertainty: 2.176826956799085e-8
-    })
-
-    @doc "CODATA 2022 value for muon mass energy equivalent in MeV.\n\nUnit: `MeV`\nRelative uncertainty: `2.176826956799085e-8`"
-    @doc group: "Leptons"
-    def muon_mass_energy_mev() do
-      @m_mu_c2_in_mev
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_mu_c2, %Metadata{
-      symbol: :m_mu_c2,
-      name: "muon mass energy equivalent",
-      value: 1.692833804e-11,
-      unit: "J",
-      uncertainty: 3.8e-19,
-      rel_uncertainty: 2.2447566861088037e-8
-    })
-
-    @doc "CODATA 2022 value for muon mass energy equivalent.\n\nUnit: `J`\nRelative uncertainty: `2.2447566861088037e-8`"
-    @doc group: "Leptons"
-    def muon_mass_energy() do
-      @m_mu_c2
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_mu, %Metadata{
-      symbol: :m_mu,
-      name: "muon mass",
-      value: 1.883531627e-28,
-      unit: "kg",
-      uncertainty: 4.2e-36,
-      rel_uncertainty: 2.2298537172373158e-8
-    })
-
-    @doc "CODATA 2022 value for muon mass.\n\nUnit: `kg`\nRelative uncertainty: `2.2298537172373158e-8`"
-    @doc group: "Leptons"
-    def muon_mass() do
-      @m_mu
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :g_u_neg, %Metadata{
-      symbol: :g_u_neg,
-      name: "muon g factor",
-      value: -2.00233184123,
-      unit: :dimensionless,
-      uncertainty: 8.2e-10,
-      rel_uncertainty: 4.095225292408511e-10
-    })
-
-    @doc "CODATA 2022 value for muon g factor.\n\nUnit: `dimensionless`\nRelative uncertainty: `4.095225292408511e-10`"
-    @doc group: "Leptons"
-    def muon_g_factor() do
-      @g_u_neg
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :big_m_e, %Metadata{
-      symbol: :big_m_e,
-      name: "electron molar mass",
-      value: 5.4857990962e-7,
-      unit: "kg mol^-1",
-      uncertainty: 1.7e-16,
-      rel_uncertainty: 3.0989104234196e-10
-    })
-
-    @doc "CODATA 2022 value for electron molar mass.\n\nUnit: `kg mol^-1`\nRelative uncertainty: `3.0989104234196e-10`"
-    @doc group: "Leptons"
-    def electron_molar_mass() do
-      @big_m_e
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_e_in_u, %Metadata{
-      symbol: :m_e_in_u,
-      name: "electron mass in u",
-      value: 5.485799090441e-4,
-      unit: "u",
-      uncertainty: 9.7e-15,
-      rel_uncertainty: 1.7682018316897974e-11
-    })
-
-    @doc "CODATA 2022 value for electron mass in u.\n\nUnit: `u`\nRelative uncertainty: `1.7682018316897974e-11`"
-    @doc group: "Leptons"
-    def electron_mass_u() do
-      @m_e_in_u
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_e_c2_in_mev, %Metadata{
-      symbol: :m_e_c2_in_mev,
-      name: "electron mass energy equivalent in MeV",
-      value: 0.51099895069,
-      unit: "MeV",
-      uncertainty: 1.6e-10,
-      rel_uncertainty: 3.131121889466751e-10
-    })
-
-    @doc "CODATA 2022 value for electron mass energy equivalent in MeV.\n\nUnit: `MeV`\nRelative uncertainty: `3.131121889466751e-10`"
-    @doc group: "Leptons"
-    def electron_mass_energy_mev() do
-      @m_e_c2_in_mev
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_e_c2, %Metadata{
-      symbol: :m_e_c2,
-      name: "electron mass energy equivalent",
-      value: 8.187105788e-14,
-      unit: "J",
-      uncertainty: 2.6e-23,
-      rel_uncertainty: 3.175725424008653e-10
-    })
-
-    @doc "CODATA 2022 value for electron mass energy equivalent.\n\nUnit: `J`\nRelative uncertainty: `3.175725424008653e-10`"
-    @doc group: "Leptons"
-    def electron_mass_energy() do
-      @m_e_c2
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_e, %Metadata{
-      symbol: :m_e,
-      name: "electron mass",
-      value: 9.1093837139e-31,
-      unit: "kg",
-      uncertainty: 2.8e-40,
-      rel_uncertainty: 3.0737534919376406e-10
-    })
-
-    @doc "CODATA 2022 value for electron mass.\n\nUnit: `kg`\nRelative uncertainty: `3.0737534919376406e-10`"
-    @doc group: "Leptons"
-    def electron_mass() do
-      @m_e
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :g_e_neg, %Metadata{
-      symbol: :g_e_neg,
-      name: "electron g factor",
-      value: -2.00231930436092,
-      unit: :dimensionless,
-      uncertainty: 3.6e-13,
-      rel_uncertainty: 1.7979150438990604e-13
-    })
-
-    @doc "CODATA 2022 value for electron g factor.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.7979150438990604e-13`"
-    @doc group: "Leptons"
-    def electron_g_factor() do
-      @g_e_neg
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :neg_e_over_m_e, %Metadata{
-      symbol: :neg_e_over_m_e,
-      name: "electron charge to mass quotient",
-      value: -175_882_000_838.0,
-      unit: "C kg^-1",
-      uncertainty: 55.0,
-      rel_uncertainty: 3.1270965612142976e-10
-    })
-
-    @doc "CODATA 2022 value for electron charge to mass quotient.\n\nUnit: `C kg^-1`\nRelative uncertainty: `3.1270965612142976e-10`"
-    @doc group: "Leptons"
-    def electron_charge_mass_quotient() do
-      @neg_e_over_m_e
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :sin2_theta_w, %Metadata{
-      symbol: :sin2_theta_w,
-      name: "weak mixing angle",
-      value: 0.22305,
-      unit: :dimensionless,
-      uncertainty: 2.3e-4,
-      rel_uncertainty: 0.0010311589329746694
-    })
-
-    @doc "CODATA 2022 value for weak mixing angle.\n\nUnit: `dimensionless`\nRelative uncertainty: `0.0010311589329746694`"
-    @doc group: "Fundamental Interactions"
-    def weak_mixing_angle() do
-      @sin2_theta_w
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :alpha_inv, %Metadata{
-      symbol: :alpha_inv,
-      name: "inverse fine-structure constant",
-      value: 137.035999177,
-      unit: :dimensionless,
-      uncertainty: 2.1e-8,
-      rel_uncertainty: 1.532444038509599e-10
-    })
-
-    @doc "CODATA 2022 value for inverse fine-structure constant.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.532444038509599e-10`"
-    @doc group: "Fundamental Interactions"
-    def inverse_fine_structure_constant() do
-      @alpha_inv
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :alpha, %Metadata{
-      symbol: :alpha,
-      name: "fine-structure constant",
-      value: 0.0072973525643,
-      unit: :dimensionless,
-      uncertainty: 1.1e-12,
-      rel_uncertainty: 1.5073959909534913e-10
-    })
-
-    @doc "CODATA 2022 value for fine-structure constant.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.5073959909534913e-10`"
-    @doc group: "Fundamental Interactions"
-    def fine_structure_constant() do
-      @alpha
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :g_f_over_hbar_c3, %Metadata{
-      symbol: :g_f_over_hbar_c3,
-      name: "Fermi coupling constant",
-      value: 1.1663787e-5,
-      unit: "GeV^-2",
-      uncertainty: 6.0e-12,
-      rel_uncertainty: 5.144126860341328e-7
-    })
-
-    @doc "CODATA 2022 value for Fermi coupling constant.\n\nUnit: `GeV^-2`\nRelative uncertainty: `5.144126860341328e-7`"
-    @doc group: "Fundamental Interactions"
-    def fermi_coupling_constant() do
-      @g_f_over_hbar_c3
     end
   )
 
@@ -1244,767 +1703,308 @@ defmodule SciCon.CODATA.Constants.AtomicNuclear do
   )
 
   (
-    Module.put_attribute(__MODULE__, :lambda_bar_c_n, %Metadata{
-      symbol: :lambda_bar_c_n,
-      name: "reduced neutron Compton wavelength",
-      value: 2.100194152e-16,
-      unit: "m",
-      uncertainty: 1.1e-25,
-      rel_uncertainty: 5.237611003499261e-10
+    Module.put_attribute(__MODULE__, :m_tau_c2_in_mev, %Metadata{
+      symbol: :m_tau_c2_in_mev,
+      name: "tau energy equivalent",
+      value: 1776.86,
+      unit: "MeV",
+      uncertainty: 0.12,
+      rel_uncertainty: 6.75348648739912e-5
     })
 
-    @doc "CODATA 2022 value for reduced neutron Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `5.237611003499261e-10`"
-    @doc group: "Compton Wavelengths"
-    def neutron_compton_wavelength_reduced() do
-      @lambda_bar_c_n
+    @doc "CODATA 2022 value for tau energy equivalent.\n\nUnit: `MeV`\nRelative uncertainty: `6.75348648739912e-5`"
+    @doc group: "Leptons"
+    def tau_mass_energy_mev() do
+      @m_tau_c2_in_mev
     end
   )
 
   (
-    Module.put_attribute(__MODULE__, :lambda_c_n, %Metadata{
-      symbol: :lambda_c_n,
-      name: "neutron Compton wavelength",
-      value: 1.31959090382e-15,
-      unit: "m",
-      uncertainty: 6.7e-25,
-      rel_uncertainty: 5.077331149074001e-10
+    Module.put_attribute(__MODULE__, :big_m_tau, %Metadata{
+      symbol: :big_m_tau,
+      name: "tau molar mass",
+      value: 0.00190754,
+      unit: "kg mol^-1",
+      uncertainty: 1.3e-7,
+      rel_uncertainty: 6.815060234647766e-5
     })
 
-    @doc "CODATA 2022 value for neutron Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `5.077331149074001e-10`"
-    @doc group: "Compton Wavelengths"
-    def neutron_compton_wavelength() do
-      @lambda_c_n
+    @doc "CODATA 2022 value for tau molar mass.\n\nUnit: `kg mol^-1`\nRelative uncertainty: `6.815060234647766e-5`"
+    @doc group: "Leptons"
+    def tau_molar_mass() do
+      @big_m_tau
     end
   )
 
   (
-    Module.put_attribute(__MODULE__, :lambda_bar_c_p, %Metadata{
-      symbol: :lambda_bar_c_p,
-      name: "reduced proton Compton wavelength",
-      value: 2.10308910051e-16,
-      unit: "m",
-      uncertainty: 6.6e-26,
-      rel_uncertainty: 3.138240789893066e-10
-    })
-
-    @doc "CODATA 2022 value for reduced proton Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `3.138240789893066e-10`"
-    @doc group: "Compton Wavelengths"
-    def proton_compton_wavelength_reduced() do
-      @lambda_bar_c_p
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :lambda_c_p, %Metadata{
-      symbol: :lambda_c_p,
-      name: "proton Compton wavelength",
-      value: 1.3214098536e-15,
-      unit: "m",
-      uncertainty: 4.1e-25,
-      rel_uncertainty: 3.1027466526226604e-10
-    })
-
-    @doc "CODATA 2022 value for proton Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `3.1027466526226604e-10`"
-    @doc group: "Compton Wavelengths"
-    def proton_compton_wavelength() do
-      @lambda_c_p
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :lambda_bar_c_tau, %Metadata{
-      symbol: :lambda_bar_c_tau,
-      name: "reduced tau Compton wavelength",
-      value: 1.110538e-16,
-      unit: "m",
-      uncertainty: 7.5e-21,
-      rel_uncertainty: 6.75348344676184e-5
-    })
-
-    @doc "CODATA 2022 value for reduced tau Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `6.75348344676184e-5`"
-    @doc group: "Compton Wavelengths"
-    def tau_compton_wavelength_reduced() do
-      @lambda_bar_c_tau
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :lambda_c_tau, %Metadata{
-      symbol: :lambda_c_tau,
-      name: "tau Compton wavelength",
-      value: 6.97771e-16,
-      unit: "m",
-      uncertainty: 4.7e-20,
-      rel_uncertainty: 6.735734216526625e-5
-    })
-
-    @doc "CODATA 2022 value for tau Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `6.735734216526625e-5`"
-    @doc group: "Compton Wavelengths"
-    def tau_compton_wavelength() do
-      @lambda_c_tau
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :lambda_bar_c_mu, %Metadata{
-      symbol: :lambda_bar_c_mu,
-      name: "reduced muon Compton wavelength",
-      value: 1.867594306e-15,
-      unit: "m",
-      uncertainty: 4.2e-23,
-      rel_uncertainty: 2.2488824186852067e-8
-    })
-
-    @doc "CODATA 2022 value for reduced muon Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `2.2488824186852067e-8`"
-    @doc group: "Compton Wavelengths"
-    def muon_compton_wavelength_reduced() do
-      @lambda_bar_c_mu
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :lambda_c_mu, %Metadata{
-      symbol: :lambda_c_mu,
-      name: "muon Compton wavelength",
-      value: 1.17344411e-14,
-      unit: "m",
-      uncertainty: 2.6e-22,
-      rel_uncertainty: 2.215699902400976e-8
-    })
-
-    @doc "CODATA 2022 value for muon Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `2.215699902400976e-8`"
-    @doc group: "Compton Wavelengths"
-    def muon_compton_wavelength() do
-      @lambda_c_mu
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :lambda_bar_c, %Metadata{
-      symbol: :lambda_bar_c,
-      name: "reduced Compton wavelength",
-      value: 3.8615926744e-13,
-      unit: "m",
-      uncertainty: 1.2e-22,
-      rel_uncertainty: 3.1075260939748173e-10
-    })
-
-    @doc "CODATA 2022 value for reduced Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `3.1075260939748173e-10`"
-    @doc group: "Compton Wavelengths"
-    def compton_wavelength_reduced() do
-      @lambda_bar_c
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :lambda_c, %Metadata{
-      symbol: :lambda_c,
-      name: "Compton wavelength",
-      value: 2.42631023538e-12,
-      unit: "m",
-      uncertainty: 7.6e-22,
-      rel_uncertainty: 3.132328211445605e-10
-    })
-
-    @doc "CODATA 2022 value for Compton wavelength.\n\nUnit: `m`\nRelative uncertainty: `3.132328211445605e-10`"
-    @doc group: "Compton Wavelengths"
-    def compton_wavelength() do
-      @lambda_c
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_t_over_m_p, %Metadata{
-      symbol: :m_t_over_m_p,
-      name: "triton-proton mass ratio",
-      value: 2.99371703403,
-      unit: :dimensionless,
-      uncertainty: 1.0e-10,
-      rel_uncertainty: 3.340329057933199e-11
-    })
-
-    @doc "CODATA 2022 value for triton-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `3.340329057933199e-11`"
-    @doc group: "Mass Ratios"
-    def triton_proton_mass_ratio() do
-      @m_t_over_m_p
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_t_over_m_e, %Metadata{
-      symbol: :m_t_over_m_e,
-      name: "triton-electron mass ratio",
-      value: 5496.92153551,
-      unit: :dimensionless,
-      uncertainty: 2.1e-7,
-      rel_uncertainty: 3.8203201308842474e-11
-    })
-
-    @doc "CODATA 2022 value for triton-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `3.8203201308842474e-11`"
-    @doc group: "Mass Ratios"
-    def triton_electron_mass_ratio() do
-      @m_t_over_m_e
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_tau_over_m_p, %Metadata{
-      symbol: :m_tau_over_m_p,
-      name: "tau-proton mass ratio",
-      value: 1.89376,
-      unit: :dimensionless,
+    Module.put_attribute(__MODULE__, :m_tau_in_u, %Metadata{
+      symbol: :m_tau_in_u,
+      name: "tau mass in u",
+      value: 1.90754,
+      unit: "u",
       uncertainty: 1.3e-4,
-      rel_uncertainty: 6.864650219668806e-5
+      rel_uncertainty: 6.815060234647766e-5
     })
 
-    @doc "CODATA 2022 value for tau-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.864650219668806e-5`"
-    @doc group: "Mass Ratios"
-    def tau_proton_mass_ratio() do
-      @m_tau_over_m_p
+    @doc "CODATA 2022 value for tau mass in u.\n\nUnit: `u`\nRelative uncertainty: `6.815060234647766e-5`"
+    @doc group: "Leptons"
+    def tau_mass_u() do
+      @m_tau_in_u
     end
   )
 
   (
-    Module.put_attribute(__MODULE__, :m_tau_over_m_n, %Metadata{
-      symbol: :m_tau_over_m_n,
-      name: "tau-neutron mass ratio",
-      value: 1.89115,
-      unit: :dimensionless,
-      uncertainty: 1.3e-4,
-      rel_uncertainty: 6.874124210136688e-5
+    Module.put_attribute(__MODULE__, :m_tau_c2, %Metadata{
+      symbol: :m_tau_c2,
+      name: "tau mass energy equivalent",
+      value: 2.84684e-10,
+      unit: "J",
+      uncertainty: 1.9e-14,
+      rel_uncertainty: 6.674066684464179e-5
     })
 
-    @doc "CODATA 2022 value for tau-neutron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.874124210136688e-5`"
-    @doc group: "Mass Ratios"
-    def tau_neutron_mass_ratio() do
-      @m_tau_over_m_n
+    @doc "CODATA 2022 value for tau mass energy equivalent.\n\nUnit: `J`\nRelative uncertainty: `6.674066684464179e-5`"
+    @doc group: "Leptons"
+    def tau_mass_energy() do
+      @m_tau_c2
     end
   )
 
   (
-    Module.put_attribute(__MODULE__, :m_tau_over_m_mu, %Metadata{
-      symbol: :m_tau_over_m_mu,
-      name: "tau-muon mass ratio",
-      value: 16.817,
-      unit: :dimensionless,
-      uncertainty: 0.0011,
-      rel_uncertainty: 6.541000178390915e-5
+    Module.put_attribute(__MODULE__, :m_tau, %Metadata{
+      symbol: :m_tau,
+      name: "tau mass",
+      value: 3.16754e-27,
+      unit: "kg",
+      uncertainty: 2.1e-31,
+      rel_uncertainty: 6.629750531958555e-5
     })
 
-    @doc "CODATA 2022 value for tau-muon mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.541000178390915e-5`"
-    @doc group: "Mass Ratios"
-    def tau_muon_mass_ratio() do
-      @m_tau_over_m_mu
+    @doc "CODATA 2022 value for tau mass.\n\nUnit: `kg`\nRelative uncertainty: `6.629750531958555e-5`"
+    @doc group: "Leptons"
+    def tau_mass() do
+      @m_tau
     end
   )
 
   (
-    Module.put_attribute(__MODULE__, :m_tau_over_m_e, %Metadata{
-      symbol: :m_tau_over_m_e,
-      name: "tau-electron mass ratio",
-      value: 3477.23,
-      unit: :dimensionless,
-      uncertainty: 0.23,
-      rel_uncertainty: 6.6144603606894e-5
+    Module.put_attribute(__MODULE__, :big_m_mu, %Metadata{
+      symbol: :big_m_mu,
+      name: "muon molar mass",
+      value: 1.134289258e-4,
+      unit: "kg mol^-1",
+      uncertainty: 2.5e-12,
+      rel_uncertainty: 2.2040233409316124e-8
     })
 
-    @doc "CODATA 2022 value for tau-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.6144603606894e-5`"
-    @doc group: "Mass Ratios"
-    def tau_electron_mass_ratio() do
-      @m_tau_over_m_e
+    @doc "CODATA 2022 value for muon molar mass.\n\nUnit: `kg mol^-1`\nRelative uncertainty: `2.2040233409316124e-8`"
+    @doc group: "Leptons"
+    def muon_molar_mass() do
+      @big_m_mu
     end
   )
 
   (
-    Module.put_attribute(__MODULE__, :m_p_over_m_tau, %Metadata{
-      symbol: :m_p_over_m_tau,
-      name: "proton-tau mass ratio",
-      value: 0.528051,
-      unit: :dimensionless,
-      uncertainty: 3.6e-5,
-      rel_uncertainty: 6.817523307407807e-5
-    })
-
-    @doc "CODATA 2022 value for proton-tau mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.817523307407807e-5`"
-    @doc group: "Mass Ratios"
-    def proton_tau_mass_ratio() do
-      @m_p_over_m_tau
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_p_over_m_n, %Metadata{
-      symbol: :m_p_over_m_n,
-      name: "proton-neutron mass ratio",
-      value: 0.99862347797,
-      unit: :dimensionless,
-      uncertainty: 4.0e-10,
-      rel_uncertainty: 4.0055136778189847e-10
-    })
-
-    @doc "CODATA 2022 value for proton-neutron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `4.0055136778189847e-10`"
-    @doc group: "Mass Ratios"
-    def proton_neutron_mass_ratio() do
-      @m_p_over_m_n
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_p_over_m_mu, %Metadata{
-      symbol: :m_p_over_m_mu,
-      name: "proton-muon mass ratio",
-      value: 8.88024338,
-      unit: :dimensionless,
-      uncertainty: 2.0e-7,
-      rel_uncertainty: 2.2521905249853637e-8
-    })
-
-    @doc "CODATA 2022 value for proton-muon mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.2521905249853637e-8`"
-    @doc group: "Mass Ratios"
-    def proton_muon_mass_ratio() do
-      @m_p_over_m_mu
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_p_over_m_e, %Metadata{
-      symbol: :m_p_over_m_e,
-      name: "proton-electron mass ratio",
-      value: 1836.152673426,
-      unit: :dimensionless,
-      uncertainty: 3.2e-8,
-      rel_uncertainty: 1.7427744687642204e-11
-    })
-
-    @doc "CODATA 2022 value for proton-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.7427744687642204e-11`"
-    @doc group: "Mass Ratios"
-    def proton_electron_mass_ratio() do
-      @m_p_over_m_e
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_n_over_m_tau, %Metadata{
-      symbol: :m_n_over_m_tau,
-      name: "neutron-tau mass ratio",
-      value: 0.528779,
-      unit: :dimensionless,
-      uncertainty: 3.6e-5,
-      rel_uncertainty: 6.808137236917502e-5
-    })
-
-    @doc "CODATA 2022 value for neutron-tau mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.808137236917502e-5`"
-    @doc group: "Mass Ratios"
-    def neutron_tau_mass_ratio() do
-      @m_n_over_m_tau
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_n_over_m_p, %Metadata{
-      symbol: :m_n_over_m_p,
-      name: "neutron-proton mass ratio",
-      value: 1.00137841946,
-      unit: :dimensionless,
-      uncertainty: 4.0e-10,
-      rel_uncertainty: 3.994493911859042e-10
-    })
-
-    @doc "CODATA 2022 value for neutron-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `3.994493911859042e-10`"
-    @doc group: "Mass Ratios"
-    def neutron_proton_mass_ratio() do
-      @m_n_over_m_p
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_n_over_m_mu, %Metadata{
-      symbol: :m_n_over_m_mu,
-      name: "neutron-muon mass ratio",
-      value: 8.89248408,
-      unit: :dimensionless,
-      uncertainty: 2.0e-7,
-      rel_uncertainty: 2.2490903351721268e-8
-    })
-
-    @doc "CODATA 2022 value for neutron-muon mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.2490903351721268e-8`"
-    @doc group: "Mass Ratios"
-    def neutron_muon_mass_ratio() do
-      @m_n_over_m_mu
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_n_over_m_e, %Metadata{
-      symbol: :m_n_over_m_e,
-      name: "neutron-electron mass ratio",
-      value: 1838.683662,
-      unit: :dimensionless,
-      uncertainty: 7.4e-7,
-      rel_uncertainty: 4.0246183467746504e-10
-    })
-
-    @doc "CODATA 2022 value for neutron-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `4.0246183467746504e-10`"
-    @doc group: "Mass Ratios"
-    def neutron_electron_mass_ratio() do
-      @m_n_over_m_e
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_mu_over_m_tau, %Metadata{
-      symbol: :m_mu_over_m_tau,
-      name: "muon-tau mass ratio",
-      value: 0.0594635,
-      unit: :dimensionless,
-      uncertainty: 4.0e-6,
-      rel_uncertainty: 6.726815609575621e-5
-    })
-
-    @doc "CODATA 2022 value for muon-tau mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.726815609575621e-5`"
-    @doc group: "Mass Ratios"
-    def muon_tau_mass_ratio() do
-      @m_mu_over_m_tau
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_mu_over_m_p, %Metadata{
-      symbol: :m_mu_over_m_p,
-      name: "muon-proton mass ratio",
-      value: 0.1126095262,
-      unit: :dimensionless,
+    Module.put_attribute(__MODULE__, :m_mu_in_u, %Metadata{
+      symbol: :m_mu_in_u,
+      name: "muon mass in u",
+      value: 0.1134289257,
+      unit: "u",
       uncertainty: 2.5e-9,
-      rel_uncertainty: 2.2200608459713066e-8
+      rel_uncertainty: 2.2040233428747004e-8
     })
 
-    @doc "CODATA 2022 value for muon-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.2200608459713066e-8`"
-    @doc group: "Mass Ratios"
-    def muon_proton_mass_ratio() do
-      @m_mu_over_m_p
+    @doc "CODATA 2022 value for muon mass in u.\n\nUnit: `u`\nRelative uncertainty: `2.2040233428747004e-8`"
+    @doc group: "Leptons"
+    def muon_mass_u() do
+      @m_mu_in_u
     end
   )
 
   (
-    Module.put_attribute(__MODULE__, :m_mu_over_m_n, %Metadata{
-      symbol: :m_mu_over_m_n,
-      name: "muon-neutron mass ratio",
-      value: 0.1124545168,
+    Module.put_attribute(__MODULE__, :m_mu_c2_in_mev, %Metadata{
+      symbol: :m_mu_c2_in_mev,
+      name: "muon mass energy equivalent in MeV",
+      value: 105.6583755,
+      unit: "MeV",
+      uncertainty: 2.3e-6,
+      rel_uncertainty: 2.176826956799085e-8
+    })
+
+    @doc "CODATA 2022 value for muon mass energy equivalent in MeV.\n\nUnit: `MeV`\nRelative uncertainty: `2.176826956799085e-8`"
+    @doc group: "Leptons"
+    def muon_mass_energy_mev() do
+      @m_mu_c2_in_mev
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_mu_c2, %Metadata{
+      symbol: :m_mu_c2,
+      name: "muon mass energy equivalent",
+      value: 1.692833804e-11,
+      unit: "J",
+      uncertainty: 3.8e-19,
+      rel_uncertainty: 2.2447566861088037e-8
+    })
+
+    @doc "CODATA 2022 value for muon mass energy equivalent.\n\nUnit: `J`\nRelative uncertainty: `2.2447566861088037e-8`"
+    @doc group: "Leptons"
+    def muon_mass_energy() do
+      @m_mu_c2
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_mu, %Metadata{
+      symbol: :m_mu,
+      name: "muon mass",
+      value: 1.883531627e-28,
+      unit: "kg",
+      uncertainty: 4.2e-36,
+      rel_uncertainty: 2.2298537172373158e-8
+    })
+
+    @doc "CODATA 2022 value for muon mass.\n\nUnit: `kg`\nRelative uncertainty: `2.2298537172373158e-8`"
+    @doc group: "Leptons"
+    def muon_mass() do
+      @m_mu
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :g_u_neg, %Metadata{
+      symbol: :g_u_neg,
+      name: "muon g factor",
+      value: -2.00233184123,
       unit: :dimensionless,
-      uncertainty: 2.5e-9,
-      rel_uncertainty: 2.2231210191816858e-8
+      uncertainty: 8.2e-10,
+      rel_uncertainty: 4.095225292408511e-10
     })
 
-    @doc "CODATA 2022 value for muon-neutron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.2231210191816858e-8`"
-    @doc group: "Mass Ratios"
-    def muon_neutron_mass_ratio() do
-      @m_mu_over_m_n
+    @doc "CODATA 2022 value for muon g factor.\n\nUnit: `dimensionless`\nRelative uncertainty: `4.095225292408511e-10`"
+    @doc group: "Leptons"
+    def muon_g_factor() do
+      @g_u_neg
     end
   )
 
   (
-    Module.put_attribute(__MODULE__, :m_mu_over_m_e, %Metadata{
-      symbol: :m_mu_over_m_e,
-      name: "muon-electron mass ratio",
-      value: 206.7682827,
+    Module.put_attribute(__MODULE__, :big_m_e, %Metadata{
+      symbol: :big_m_e,
+      name: "electron molar mass",
+      value: 5.4857990962e-7,
+      unit: "kg mol^-1",
+      uncertainty: 1.7e-16,
+      rel_uncertainty: 3.0989104234196e-10
+    })
+
+    @doc "CODATA 2022 value for electron molar mass.\n\nUnit: `kg mol^-1`\nRelative uncertainty: `3.0989104234196e-10`"
+    @doc group: "Leptons"
+    def electron_molar_mass() do
+      @big_m_e
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_e_in_u, %Metadata{
+      symbol: :m_e_in_u,
+      name: "electron mass in u",
+      value: 5.485799090441e-4,
+      unit: "u",
+      uncertainty: 9.7e-15,
+      rel_uncertainty: 1.7682018316897974e-11
+    })
+
+    @doc "CODATA 2022 value for electron mass in u.\n\nUnit: `u`\nRelative uncertainty: `1.7682018316897974e-11`"
+    @doc group: "Leptons"
+    def electron_mass_u() do
+      @m_e_in_u
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_e_c2_in_mev, %Metadata{
+      symbol: :m_e_c2_in_mev,
+      name: "electron mass energy equivalent in MeV",
+      value: 0.51099895069,
+      unit: "MeV",
+      uncertainty: 1.6e-10,
+      rel_uncertainty: 3.131121889466751e-10
+    })
+
+    @doc "CODATA 2022 value for electron mass energy equivalent in MeV.\n\nUnit: `MeV`\nRelative uncertainty: `3.131121889466751e-10`"
+    @doc group: "Leptons"
+    def electron_mass_energy_mev() do
+      @m_e_c2_in_mev
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_e_c2, %Metadata{
+      symbol: :m_e_c2,
+      name: "electron mass energy equivalent",
+      value: 8.187105788e-14,
+      unit: "J",
+      uncertainty: 2.6e-23,
+      rel_uncertainty: 3.175725424008653e-10
+    })
+
+    @doc "CODATA 2022 value for electron mass energy equivalent.\n\nUnit: `J`\nRelative uncertainty: `3.175725424008653e-10`"
+    @doc group: "Leptons"
+    def electron_mass_energy() do
+      @m_e_c2
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :m_e, %Metadata{
+      symbol: :m_e,
+      name: "electron mass",
+      value: 9.1093837139e-31,
+      unit: "kg",
+      uncertainty: 2.8e-40,
+      rel_uncertainty: 3.0737534919376406e-10
+    })
+
+    @doc "CODATA 2022 value for electron mass.\n\nUnit: `kg`\nRelative uncertainty: `3.0737534919376406e-10`"
+    @doc group: "Leptons"
+    def electron_mass() do
+      @m_e
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :g_e_neg, %Metadata{
+      symbol: :g_e_neg,
+      name: "electron g factor",
+      value: -2.00231930436092,
       unit: :dimensionless,
-      uncertainty: 4.6e-6,
-      rel_uncertainty: 2.2247125816071793e-8
+      uncertainty: 3.6e-13,
+      rel_uncertainty: 1.7979150438990604e-13
     })
 
-    @doc "CODATA 2022 value for muon-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.2247125816071793e-8`"
-    @doc group: "Mass Ratios"
-    def muon_electron_mass_ratio() do
-      @m_mu_over_m_e
+    @doc "CODATA 2022 value for electron g factor.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.7979150438990604e-13`"
+    @doc group: "Leptons"
+    def electron_g_factor() do
+      @g_e_neg
     end
   )
 
   (
-    Module.put_attribute(__MODULE__, :m_h_over_m_p, %Metadata{
-      symbol: :m_h_over_m_p,
-      name: "helion-proton mass ratio",
-      value: 2.993152671552,
-      unit: :dimensionless,
-      uncertainty: 7.0e-11,
-      rel_uncertainty: 2.338671216650764e-11
+    Module.put_attribute(__MODULE__, :neg_e_over_m_e, %Metadata{
+      symbol: :neg_e_over_m_e,
+      name: "electron charge to mass quotient",
+      value: -175_882_000_838.0,
+      unit: "C kg^-1",
+      uncertainty: 55.0,
+      rel_uncertainty: 3.1270965612142976e-10
     })
 
-    @doc "CODATA 2022 value for helion-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.338671216650764e-11`"
-    @doc group: "Mass Ratios"
-    def helion_proton_mass_ratio() do
-      @m_h_over_m_p
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_h_over_m_e, %Metadata{
-      symbol: :m_h_over_m_e,
-      name: "helion-electron mass ratio",
-      value: 5495.88527984,
-      unit: :dimensionless,
-      uncertainty: 1.6e-7,
-      rel_uncertainty: 2.9112689194389084e-11
-    })
-
-    @doc "CODATA 2022 value for helion-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.9112689194389084e-11`"
-    @doc group: "Mass Ratios"
-    def helion_electron_mass_ratio() do
-      @m_h_over_m_e
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_e_over_m_t, %Metadata{
-      symbol: :m_e_over_m_t,
-      name: "electron-triton mass ratio",
-      value: 1.819200062327e-4,
-      unit: :dimensionless,
-      uncertainty: 6.8e-15,
-      rel_uncertainty: 3.7379066441444e-11
-    })
-
-    @doc "CODATA 2022 value for electron-triton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `3.7379066441444e-11`"
-    @doc group: "Mass Ratios"
-    def electron_triton_mass_ratio() do
-      @m_e_over_m_t
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_e_over_m_tau, %Metadata{
-      symbol: :m_e_over_m_tau,
-      name: "electron-tau mass ratio",
-      value: 2.87585e-4,
-      unit: :dimensionless,
-      uncertainty: 1.9e-8,
-      rel_uncertainty: 6.606742354434343e-5
-    })
-
-    @doc "CODATA 2022 value for electron-tau mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `6.606742354434343e-5`"
-    @doc group: "Mass Ratios"
-    def electron_tau_mass_ratio() do
-      @m_e_over_m_tau
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_e_over_m_p, %Metadata{
-      symbol: :m_e_over_m_p,
-      name: "electron-proton mass ratio",
-      value: 5.446170214889e-4,
-      unit: :dimensionless,
-      uncertainty: 9.4e-15,
-      rel_uncertainty: 1.7259835130201827e-11
-    })
-
-    @doc "CODATA 2022 value for electron-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.7259835130201827e-11`"
-    @doc group: "Mass Ratios"
-    def electron_proton_mass_ratio() do
-      @m_e_over_m_p
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_e_over_m_n, %Metadata{
-      symbol: :m_e_over_m_n,
-      name: "electron-neutron mass ratio",
-      value: 5.4386734416e-4,
-      unit: :dimensionless,
-      uncertainty: 2.2e-13,
-      rel_uncertainty: 4.0451040563906023e-10
-    })
-
-    @doc "CODATA 2022 value for electron-neutron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `4.0451040563906023e-10`"
-    @doc group: "Mass Ratios"
-    def electron_neutron_mass_ratio() do
-      @m_e_over_m_n
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_e_over_m_u, %Metadata{
-      symbol: :m_e_over_m_u,
-      name: "electron-muon mass ratio",
-      value: 0.0048363317,
-      unit: :dimensionless,
-      uncertainty: 1.1e-10,
-      rel_uncertainty: 2.2744511092983964e-8
-    })
-
-    @doc "CODATA 2022 value for electron-muon mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.2744511092983964e-8`"
-    @doc group: "Mass Ratios"
-    def electron_muon_mass_ratio() do
-      @m_e_over_m_u
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_e_over_m_h, %Metadata{
-      symbol: :m_e_over_m_h,
-      name: "electron-helion mass ratio",
-      value: 1.819543074649e-4,
-      unit: :dimensionless,
-      uncertainty: 5.3e-15,
-      rel_uncertainty: 2.912819198315709e-11
-    })
-
-    @doc "CODATA 2022 value for electron-helion mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.912819198315709e-11`"
-    @doc group: "Mass Ratios"
-    def electron_helion_mass_ratio() do
-      @m_e_over_m_h
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_e_over_m_d, %Metadata{
-      symbol: :m_e_over_m_d,
-      name: "electron-deuteron mass ratio",
-      value: 2.724437107629e-4,
-      unit: :dimensionless,
-      uncertainty: 4.7e-15,
-      rel_uncertainty: 1.7251269947979366e-11
-    })
-
-    @doc "CODATA 2022 value for electron-deuteron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.7251269947979366e-11`"
-    @doc group: "Mass Ratios"
-    def electron_deuteron_mass_ratio() do
-      @m_e_over_m_d
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_e_over_m_alpha, %Metadata{
-      symbol: :m_e_over_m_alpha,
-      name: "electron to alpha particle mass ratio",
-      value: 1.370933554733e-4,
-      unit: :dimensionless,
-      uncertainty: 3.2e-15,
-      rel_uncertainty: 2.3341758533463172e-11
-    })
-
-    @doc "CODATA 2022 value for electron to alpha particle mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.3341758533463172e-11`"
-    @doc group: "Mass Ratios"
-    def electron_alpha_particle_mass_ratio() do
-      @m_e_over_m_alpha
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_d_over_m_p, %Metadata{
-      symbol: :m_d_over_m_p,
-      name: "deuteron-proton mass ratio",
-      value: 1.9990075012699,
-      unit: :dimensionless,
-      uncertainty: 8.4e-12,
-      rel_uncertainty: 4.202085282153154e-12
-    })
-
-    @doc "CODATA 2022 value for deuteron-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `4.202085282153154e-12`"
-    @doc group: "Mass Ratios"
-    def deuteron_proton_mass_ratio() do
-      @m_d_over_m_p
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_d_over_m_e, %Metadata{
-      symbol: :m_d_over_m_e,
-      name: "deuteron-electron mass ratio",
-      value: 3670.482967655,
-      unit: :dimensionless,
-      uncertainty: 6.3e-8,
-      rel_uncertainty: 1.7163953778063564e-11
-    })
-
-    @doc "CODATA 2022 value for deuteron-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.7163953778063564e-11`"
-    @doc group: "Mass Ratios"
-    def deuteron_electron_mass_ratio() do
-      @m_d_over_m_e
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_alpha_over_m_p, %Metadata{
-      symbol: :m_alpha_over_m_p,
-      name: "alpha particle-proton mass ratio",
-      value: 3.972599690252,
-      unit: :dimensionless,
-      uncertainty: 7.0e-11,
-      rel_uncertainty: 1.7620703181286204e-11
-    })
-
-    @doc "CODATA 2022 value for alpha particle-proton mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `1.7620703181286204e-11`"
-    @doc group: "Mass Ratios"
-    def alpha_particle_proton_mass_ratio() do
-      @m_alpha_over_m_p
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :m_alpha_over_m_e, %Metadata{
-      symbol: :m_alpha_over_m_e,
-      name: "alpha particle-electron mass ratio",
-      value: 7294.29954171,
-      unit: :dimensionless,
-      uncertainty: 1.7e-7,
-      rel_uncertainty: 2.330587043045218e-11
-    })
-
-    @doc "CODATA 2022 value for alpha particle-electron mass ratio.\n\nUnit: `dimensionless`\nRelative uncertainty: `2.330587043045218e-11`"
-    @doc group: "Mass Ratios"
-    def alpha_particle_electron_mass_ratio() do
-      @m_alpha_over_m_e
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :twice_pi_hbar_over_m_e, %Metadata{
-      symbol: :twice_pi_hbar_over_m_e,
-      name: "quantum of circulation times 2",
-      value: 7.2738950934e-4,
-      unit: "m^2 s^-1",
-      uncertainty: 2.3e-13,
-      rel_uncertainty: 3.161992262009545e-10
-    })
-
-    @doc "CODATA 2022 value for quantum of circulation times 2.\n\nUnit: `m^2 s^-1`\nRelative uncertainty: `3.161992262009545e-10`"
-    @doc group: "Miscellaneous"
-    def quantum_of_circulation_times_two() do
-      @twice_pi_hbar_over_m_e
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :pi_hbar_over_m_e, %Metadata{
-      symbol: :pi_hbar_over_m_e,
-      name: "quantum of circulation",
-      value: 3.6369475467e-4,
-      unit: "m^2 s^-1",
-      uncertainty: 1.1e-13,
-      rel_uncertainty: 3.024514337574348e-10
-    })
-
-    @doc "CODATA 2022 value for quantum of circulation.\n\nUnit: `m^2 s^-1`\nRelative uncertainty: `3.024514337574348e-10`"
-    @doc group: "Miscellaneous"
-    def quantum_of_circulation() do
-      @pi_hbar_over_m_e
-    end
-  )
-
-  (
-    Module.put_attribute(__MODULE__, :sigma_e, %Metadata{
-      symbol: :sigma_e,
-      name: "Thomson cross section",
-      value: 6.6524587051e-29,
-      unit: "m^2",
-      uncertainty: 6.2e-38,
-      rel_uncertainty: 9.319862437096933e-10
-    })
-
-    @doc "CODATA 2022 value for Thomson cross section.\n\nUnit: `m^2`\nRelative uncertainty: `9.319862437096933e-10`"
-    @doc group: "Miscellaneous"
-    def thomson_cross_section() do
-      @sigma_e
+    @doc "CODATA 2022 value for electron charge to mass quotient.\n\nUnit: `C kg^-1`\nRelative uncertainty: `3.1270965612142976e-10`"
+    @doc group: "Leptons"
+    def electron_charge_mass_quotient() do
+      @neg_e_over_m_e
     end
   )
 end

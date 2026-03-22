@@ -3,23 +3,6 @@ defmodule SciCon.CODATA.Constants.Universal do
   alias SciCon.CODATA.Metadata
 
   (
-    Module.put_attribute(__MODULE__, :c, %Metadata{
-      symbol: :c,
-      name: "speed of light in vacuum",
-      value: 299_792_458.0,
-      unit: "m s^-1",
-      uncertainty: :exact,
-      rel_uncertainty: :exact
-    })
-
-    @doc "CODATA 2022 value for speed of light in vacuum.\n\nUnit: `m s^-1`\nRelative uncertainty: `exact`"
-    @doc group: "Relativistic"
-    def speed_of_light() do
-      @c
-    end
-  )
-
-  (
     Module.put_attribute(__MODULE__, :epsilon_0, %Metadata{
       symbol: :epsilon_0,
       name: "vacuum electric permittivity",
@@ -67,6 +50,23 @@ defmodule SciCon.CODATA.Constants.Universal do
     @doc group: "Gravitation"
     def newtonian_gravitation() do
       @g
+    end
+  )
+
+  (
+    Module.put_attribute(__MODULE__, :c, %Metadata{
+      symbol: :c,
+      name: "speed of light in vacuum",
+      value: 299_792_458.0,
+      unit: "m s^-1",
+      uncertainty: :exact,
+      rel_uncertainty: :exact
+    })
+
+    @doc "CODATA 2022 value for speed of light in vacuum.\n\nUnit: `m s^-1`\nRelative uncertainty: `exact`"
+    @doc group: "Relativistic"
+    def speed_of_light() do
+      @c
     end
   )
 
