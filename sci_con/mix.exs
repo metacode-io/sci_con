@@ -21,8 +21,8 @@ defmodule SciCon.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:req, "~> 0.5.16"},
-      {:nimble_parsec, "~> 1.4.2"}
+      {:req, "~> 0.5.16", only: [:dev, :test], runtime: false},
+      {:nimble_parsec, "~> 1.4.2", only: [:dev, :test], runtime: false}
     ]
   end
 end
