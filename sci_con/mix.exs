@@ -51,7 +51,7 @@ defmodule SciCon.MixProject do
         ],
         Codegen: [
           CODATA: [
-            Scicon.Codegen.CODATA
+            SciCon.Codegen.CODATA
           ]
         ]
       ]
