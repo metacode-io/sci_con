@@ -22,7 +22,8 @@ defmodule SciCon.MixProject do
   defp deps do
     [
       {:req, "~> 0.5.16", only: [:dev, :test], runtime: false},
-      {:nimble_parsec, "~> 1.4.2", only: [:dev, :test], runtime: false}
+      {:nimble_parsec, "~> 1.4.2", only: [:dev, :test], runtime: false},
+      {:ex_doc, "~> 0.40.1", only: :dev, runtime: false}
     ]
   end
 end
