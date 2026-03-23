@@ -1,4 +1,4 @@
-defmodule SciCon.Codegen.CODATA.Mappings.AtomicSpectroscopyMapper do
+defmodule SciCon.Codegen.CODATA.Mappers.AtomicSpectroscopyMapper do
   @moduledoc """
   Mapping from NIST CODATA 'Defined constants' names to internal
   symbols and function names. Only taking certain defined constants
@@ -6,6 +6,7 @@ defmodule SciCon.Codegen.CODATA.Mappings.AtomicSpectroscopyMapper do
   that are related to atomic spectroscopy. At present, this only contains
   one special defined constant which is used to define seconds in time.
   """
+  @moduledoc false
 
   use SciCon.Codegen.CODATA.Mapper, category: :atomic_spectroscopy
 

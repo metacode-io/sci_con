@@ -1,10 +1,11 @@
-defmodule SciCon.Codegen.CODATA.Mappings.StandardConditionsMapper do
+defmodule SciCon.Codegen.CODATA.Mappers.StandardConditionsMapper do
   @moduledoc """
   Mapping from NIST CODATA 'Defined constants' names to internal
   symbols and function names. Only taking certain defined constants
   that are not already contained within a Physics-based category and
   that are related to standard conditions.
   """
+  @moduledoc false
 
   use SciCon.Codegen.CODATA.Mapper, category: :standard_conditions
 

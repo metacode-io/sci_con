@@ -47,12 +47,23 @@ defmodule SciCon.MixProject do
       groups_for_modules: [
         CODATA: [
           SciCon.CODATA.Metadata,
-          SciCon.CODATA.Constants
+          SciCon.CODATA.Constants.AtomicNuclear,
+          SciCon.CODATA.Constants.AtomicSpectroscopy,
+          SciCon.CODATA.Constants.Electromagnetic,
+          SciCon.CODATA.Constants.PhysicoChemical,
+          SciCon.CODATA.Constants.StandardConditions,
+          SciCon.CODATA.Constants.Universal,
         ],
         Codegen: [
-          CODATA: [
-            SciCon.Codegen.CODATA
-          ]
+          SciCon.Codegen.CODATA,
+          SciCon.Codegen.CODATA.Generator,
+          SciCon.Codegen.CODATA.Mapper,
+          SciCon.Codegen.CODATA.Mapping,
+          SciCon.Codegen.CODATA.ParsedRow,
+          SciCon.Codegen.CODATA.ParserHelpers,
+          SciCon.Codegen.CODATA.Parser,
+          SciCon.Codegen.CODATA.Source,
+          SciCon.Codegen.CODATA.Mappers
         ]
       ]
     ]

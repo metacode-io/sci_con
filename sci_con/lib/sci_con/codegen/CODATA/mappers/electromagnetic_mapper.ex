@@ -1,8 +1,9 @@
-defmodule SciCon.Codegen.CODATA.Mappings.ElectromagneticMapper do
+defmodule SciCon.Codegen.CODATA.Mappers.ElectromagneticMapper do
   @moduledoc """
   Mapping from NIST CODATA 'Electromagnetic' names to internal
   symbols and function names.
   """
+  @moduledoc false
 
   use SciCon.Codegen.CODATA.Mapper, category: :electromagnetic
 
